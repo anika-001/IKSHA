@@ -8,13 +8,15 @@ import { environment } from "src/environments/environment";
 
 import firebase from 'firebase/app';
 import { AngularFireModule } from "@angular/fire";
+import { LoginComponent } from './login/login.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

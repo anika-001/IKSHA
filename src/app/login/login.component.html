@@ -1,0 +1,41 @@
+<div class="main">
+    <div class = "authcard">
+        <div class = "tabs">
+            <div class = "tab" (click) = "togglelogin(true)" [ngClass]="{
+                'tabactive': login
+            }">Login</div>
+            <div class = "tab" (click) = "togglelogin(false)" [ngClass]="{
+                'tabactive': !login
+            }">Sign up</div>
+        </div>
+        <div class = "loginsignup" [ngClass]="{
+            'loginactive': login,
+            'signupactive': !login
+        }">
+            <div class="logincard">
+                <div class="title">Cov-aid</div>
+                <div class="inputs">
+                    <input placeholder="Enter email" type="email" class="input">
+                    <input placeholder="Enter password" type="password" class="input">
+                </div>
+                <div class = "logindeets">
+                    <button class="loginbutton">Login</button>
+                    <!-- <a>Forgot Password?</a> -->
+                    <div style = "color: blue; cursor: pointer;">Not yet Registered? Register Now</div>
+                </div>
+            </div>
+            <div class="logincard">
+                <div class="title">Cov-aid</div>
+                <div class="inputs">
+                    <input placeholder="Enter email" type="email" class="input">
+                    <input placeholder="Enter password" type="password" class="input">
+                </div>
+                <div class = "logindeets">
+                    <button class="loginbutton">Register</button>
+                    <div style = "color: blue; cursor: pointer;">Already Registered? Login</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
