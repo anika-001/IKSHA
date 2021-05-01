@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Navbar, NavDrawer } from './jsonobjectsdata/navigation';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title = 'educationapp';
 
-  constructor() { }
+  opened: boolean = false;
+  user: any;
+  userEmail: any = "idkyet";
+  navdata: any;
+  navdrawerdata: any;
+  selectedRole: string = "student";
+  constructor(){}
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.navdata = Navbar;
+    this.navdrawerdata = NavDrawer;
   }
 }

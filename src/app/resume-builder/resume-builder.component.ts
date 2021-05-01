@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resume-builder',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 })
 export class ResumeBuilderComponent implements OnInit {
   resumeBuilderForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.resumeBuilderForm = this.formBuilder.group({
@@ -32,8 +33,21 @@ export class ResumeBuilderComponent implements OnInit {
   }
 
   save() {
-    console.log(this.resumeBuilderForm);
+    console.log(this.resumeBuilderForm, this.resumeBuilderForm.controls.experienceBlocks.value[0].company);
     console.log('Saved: ' + JSON.stringify(this.resumeBuilderForm.value));
+    
+    this.router.navigate(['/profilesite'], { queryParams: { 
+      fname: this.resumeBuilderForm.get('firstName').value,
+      lname: this.resumeBuilderForm.get('lastName').value,
+      email: this.resumeBuilderForm.get('email').value,
+      phone: this.resumeBuilderForm.get('phone').value,
+      title: this.resumeBuilderForm.controls.experienceBlocks.value[0].title,
+      company: this.resumeBuilderForm.controls.experienceBlocks.value[0].company,
+      location: this.resumeBuilderForm.controls.experienceBlocks.value[0].location,
+      startDate: this.resumeBuilderForm.controls.experienceBlocks.value[0].startDate,
+      endDate: this.resumeBuilderForm.controls.experienceBlocks.value[0].endDate,
+      description: this.resumeBuilderForm.controls.experienceBlocks.value[0].description,
+    } })
   }
 
   get experienceBlocks(): FormArray {

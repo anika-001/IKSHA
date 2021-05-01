@@ -8,34 +8,33 @@
                 'tabactive': !login
             }">Sign up</div>
         </div>
-        <div class = "loginsignup" [ngClass]="{
+        <form class = "loginsignup" [formGroup]="Auth" [ngClass]="{
             'loginactive': login,
             'signupactive': !login
         }">
             <div class="logincard">
-                <div class="title">Cov-aid</div>
+                <div class="title">Stunet</div>
                 <div class="inputs">
-                    <input placeholder="Enter email" type="email" class="input">
-                    <input placeholder="Enter password" type="password" class="input">
+                    <input placeholder="Enter email" type="email" class="input" formControlName = "emaillogin">
+                    <input placeholder="Enter password" type="password" class="input" formControlName = "passwordlogin">
                 </div>
                 <div class = "logindeets">
-                    <button class="loginbutton">Login</button> -->
-                    <a>Forgot Password?</a>
-                    <div style = "color: blue; cursor: pointer;">Not yet Registered? Register Now</div>
+                    <button class="loginbutton" (click) = "signin()">Login</button>
+                    <div style = "color: blue; cursor: pointer;" (click) = "togglelogin(false)">Not yet Registered? Register Now</div>
                 </div>
             </div>
             <div class="logincard">
-                <div class="title">Cov-aid</div>
+                <div class="title">Stunet</div>
                 <div class="inputs">
-                    <input placeholder="Enter email" type="email" class="input">
-                    <input placeholder="Enter password" type="password" class="input">
+                    <input placeholder="Enter email" type="email" class="input" formControlName = "emailreg">
+                    <input placeholder="Enter password" type="password" class="input" formControlName = "passwordreg">
                 </div>
                 <div class = "logindeets">
-                    <button class="loginbutton">Register</button>
-                    <div style = "color: blue; cursor: pointer;">Already Registered? Login</div>
+                    <button class="loginbutton" (click) = "signup()">Register</button>
+                    <div style = "color: blue; cursor: pointer;" (click) = "togglelogin(true)">Already Registered? Login</div>
                 </div>
             </div>
-        </div>
+        </form>
         
     </div>
 </div>

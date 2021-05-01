@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { FinanceComponent } from './finance/finance.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ManagementComponent } from './management/management.component';
 import { UploadschedComponent } from './uploadsched/uploadsched.component';
 import { ResourcesComponent } from './resources/resources.component';
 
+import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+import { ProfilesiteComponent } from './profilesite/profilesite.component';
+import { TemplatesComponent } from './templates/templates.component';
+import {EventsComponent} from './events/events.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -37,7 +42,24 @@ const routes: Routes = [
     path: 'resources',
     component: ResourcesComponent
   },
-  
+  {
+    path: 'home',
+    component: HomeComponent
+
+  },
+
+  {
+    path:'profilesite',
+    component: ProfilesiteComponent
+  },
+  {
+    path: 'templates',
+    component: TemplatesComponent
+  },
+  {
+    path:'events',
+    component: EventsComponent
+  }
 ];
 
 @NgModule({
