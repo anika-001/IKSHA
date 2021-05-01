@@ -12,20 +12,35 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.11",
+    "@angular/cdk": "11.2.4",
     "@angular/common": "~11.2.11",
     "@angular/compiler": "~11.2.11",
     "@angular/core": "~11.2.11",
     "@angular/fire": "^6.1.4",
     "@angular/forms": "~11.2.11",
+    "@angular/localize": "^11.2.5",
+    "@angular/material": "^11.2.11",
     "@angular/platform-browser": "~11.2.11",
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
     "bootstrap": "^4.6.0",
     "firebase": "^8.4.2",
+<<<<<<< HEAD
     "pdfmake": "^0.1.71",
+=======
+    "@ng-bootstrap/ng-bootstrap": "^9.0.2",
+    "angular-font-awesome": "^3.1.2",
+    "angular-hammer": "^2.2.0",
+    "bootstrap": "^4.6.0",
+    "chart.js": "^2.9.3",
+>>>>>>> 555830de3b03c715251fb574bc00fed457af9232
     "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "zone.js": "~0.11.3",
+    "jquery": "^3.6.0",
+    "typescript": "^4.0.5",
+    "popper.js": "^1.16.1",
+    "ng2-charts": "^2.4.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.10",
