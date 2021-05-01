@@ -1,40 +1,56 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
+import { Injectable, NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { environment } from "src/environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+
 
 import firebase from 'firebase/app';
-import { AngularFireModule } from "@angular/fire";
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
-//import { ProfilebuildComponent } from './profilebuild/profilebuild.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
-=======
-import { FinanceComponent } from './finance/finance.component';
 
->>>>>>> 555830de3b03c715251fb574bc00fed457af9232
+//import { ProfilebuildComponent } from './profilebuild/profilebuild.component';
+import { FinanceComponent } from './finance/finance.component';
+import { AddexpenseComponent } from './addexpense/addexpense.component';
+import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+
 firebase.initializeApp(environment.firebaseConfig);
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-<<<<<<< HEAD
-    ResumeBuilderComponent,
-    //ProfilebuildComponent
-=======
-    FinanceComponent
->>>>>>> 555830de3b03c715251fb574bc00fed457af9232
+    FinanceComponent,
+    AddexpenseComponent,
+    ResumeBuilderComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'educationapp'),
-    AppRoutingModule,ReactiveFormsModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HammerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'Krishi Bazaar'),
+    AngularFirestoreModule,
+    ChartsModule,
+    MatSidenavModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

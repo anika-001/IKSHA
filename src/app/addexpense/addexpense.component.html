@@ -1,0 +1,21 @@
+<div class = "main">
+    <div class = "formcont">
+        <div class = "formtitle">
+            Add expense
+        </div>
+        <form [formGroup]="addexp" class = "form" >
+            <input type = "text" placeholder="Enter Expense Name">
+            <input type = "number" placeholder="Enter Expense Amount">
+            <mat-form-field>
+                <mat-label style="font-size: 80%; color: black;">Select Role</mat-label>
+                <mat-select [(value)]="type"
+                    style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <mat-option value="farmer">
+                        farmer</mat-option>
+                    <mat-option value="consumer">
+                        consumer</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </div>
+</div>

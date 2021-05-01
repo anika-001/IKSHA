@@ -1,0 +1,82 @@
+.main{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    height: 10vh;
+    width: 100%;
+    // background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 300%;
+}
+
+.addmanagement{
+    height: 5vh;
+    width: 100%;
+    // background-color: bisque;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    justify-content: space-evenly;
+}
+
+.financestats{
+    height: 85vh;
+    width: 100vw;
+    // background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.chart{
+    flex-basis: 36%;
+    height: 30vh;
+    margin: 2%;
+    background-color: rgb(125, 116, 133);
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(230, 230, 230);
+}
+
+.charttitle{
+    flex-basis: 40%;
+    // background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    text-align: center;
+}
+
+.chartdiag{
+    flex-basis: 60%;
+    // background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addmanagebut{
+    background-color: cornflowerblue;
+    // align-self: flex-end;
+    align-self: center;
+    width: fit-content;
+    font-size: 150%;
+    padding: 0.5% 2%;
+    // margin-right: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}

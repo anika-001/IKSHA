@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-resume-builder',
   templateUrl: './resume-builder.component.html',
-  styleUrls: ['./resume-builder.component.css']
+  styleUrls: ['./resume-builder.component.scss']
 })
 export class ResumeBuilderComponent implements OnInit {
   resumeBuilderForm: FormGroup;
