@@ -1,8 +1,13 @@
 .common_main{
     min-height: calc(100vh -39px);
+    max-height: calc(100vh -39px);
     min-width: 100vw;
     display: flex;
     flex-direction: column;
+    // overflow-x: hidden;
+    // overflow: visible;
+    // border: solid  black;
+    // margin-top: 6vh;
 }
 
 
@@ -11,6 +16,7 @@
     //background-color: rgba(0, 0, 0, 0.7);
     background-color: white;
     width: 20vw;
+    // height: 80vh;
     min-height: calc(100vh - 39px);
     display: flex;
     color: black;
@@ -20,8 +26,9 @@
     border-bottom-left-radius: 0px;
     border-right: solid thin white;
     transition: width 0.2s ease;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     position: fixed;
+    // overflow: hidden;
     //top: 39px;
 }
 
@@ -100,7 +107,7 @@
 .content{
     //justify-content: space-around;
     //background-color: aquamarine;
-    max-height: calc(100vh - 39px);
+    // max-height: calc(100vh - 39px);
     min-height: calc(100vh - 39px);
     //overflow: hidden;
     max-width: 100vw;
@@ -108,10 +115,9 @@
     //background-color: aliceblue;
     //background: url("../assets/images/apple.jpg") no-repeat left top, linear-gradient(#eb01a5, #d13531);
     // overflow-x: hidden;
-    overflow: hidden;
+    // overflow-y: visible;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     // background-color: aquamarine;
     // background-image: url(../assets/images/bg.png);
@@ -223,11 +229,13 @@ a.nav-bar-item:before {
 .mainpagecont{
     margin-top: 6vh;
     height: 100%;
+    // overflow-y: visible;
+    // overflow-x: hidden;
 }
 .mainpage{
     height: 100%;
-    overflow-y: visible;
-    overflow-x: hidden;
+    // overflow-y: visible;
+    // overflow-x: hidden;
 }
 
 

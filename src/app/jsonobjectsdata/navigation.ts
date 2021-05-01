@@ -17,7 +17,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-cart-plus menuicon",
         "name": "Profile and Resume",
-        "link":"/add-items",
+        "link":"/templates",
     },
 
     {
