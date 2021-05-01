@@ -24,6 +24,7 @@ import { LoginComponent } from './login/login.component';
 import { FinanceComponent } from './finance/finance.component';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -35,7 +36,8 @@ firebase.initializeApp(environment.firebaseConfig);
     LoginComponent,
     FinanceComponent,
     AddexpenseComponent,
-    ResumeBuilderComponent
+    ResumeBuilderComponent,
+    AddtriggerComponent
   ],
   imports: [
     BrowserModule,
