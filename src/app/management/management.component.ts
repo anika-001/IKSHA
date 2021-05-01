@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ManagementComponent implements OnInit {
 
   constructor() { }
+  days: any[] = [];
+  week=["Sat","Sun","Mon","Tue","Wed","Thur","Fri"];
 
   ngOnInit(): void {
+    for(let x=0; x<31; x++){
+       this.days.push({"date": x + 1, "day":this.week[x%7]});
+    }
+    console.log(this.days);
   }
 
 }

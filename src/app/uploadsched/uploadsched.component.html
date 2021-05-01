@@ -1,18 +1,21 @@
 <div class = "main">
     <div class = "formcont">
         <div class = "formtitle">
-            Add Trigger
+            Upload Schedule
         </div>
-        <form [formGroup]="addtrig" class = "form" >
-            <input type = "number" placeholder="Enter Trigger Amount" class = "input">
+        <form [formGroup]="upsched" class = "form" >
+            <input type = "text" placeholder="Enter Schedule Name" class = "input">
+            <!-- <input type = "number" placeholder="Enter Expense Amount" class = "input"> -->
             <mat-form-field>
                 <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
                 <mat-select [(value)]="type"
                     style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                    <mat-option value="x.name" *ngFor = "let x of catoptions">
+                    <mat-option value="x.name" *ngFor = "let x of typeoptions">
                         {{x.displayname}}</mat-option>
                 </mat-select>
             </mat-form-field>
+            Upload schedule: (Optional)
+            <input type="file" id="file" (change)="receiptUpload($event.target.files)" class="input">
             <div class = "submitbut">
                 Submit
             </div>
