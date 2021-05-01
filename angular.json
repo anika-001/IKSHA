@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "covid": {
+    "educationapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/covid",
+            "outputPath": "dist/educationapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "covid:build"
+            "browserTarget": "educationapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "covid:build:production"
+              "browserTarget": "educationapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "covid:build"
+            "browserTarget": "educationapp:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "covid:serve"
+            "devServerTarget": "educationapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "covid:serve:production"
+              "devServerTarget": "educationapp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "covid"
+  "defaultProject": "educationapp"
 }

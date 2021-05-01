@@ -20,7 +20,7 @@ firebase.initializeApp(environment.firebaseConfig);
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'Cov-aid'),
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'educationapp'),
     AppRoutingModule
   ],
   providers: [],
