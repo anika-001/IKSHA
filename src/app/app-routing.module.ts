@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
+import {EventsComponent} from './events/events.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'templates',
     component: TemplatesComponent
+  },
+  {
+    path:'events',
+    component: EventsComponent
   }
 ];
 

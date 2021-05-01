@@ -28,6 +28,7 @@ import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { HomeComponent } from './home/home.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
+import { EventsComponent } from './events/events.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -51,7 +52,8 @@ export class HammerConfig extends HammerGestureConfig {
     AddtriggerComponent,
     HomeComponent,
     ProfilesiteComponent,
-    TemplatesComponent
+    TemplatesComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
