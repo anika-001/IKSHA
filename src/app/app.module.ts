@@ -9,6 +9,7 @@ import { environment } from "src/environments/environment";
 import firebase from 'firebase/app';
 import { AngularFireModule } from "@angular/fire";
 import { LoginComponent } from './login/login.component';
+import { FinanceComponent } from './finance/finance.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -16,7 +17,8 @@ firebase.initializeApp(environment.firebaseConfig);
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    FinanceComponent
   ],
   imports: [
     BrowserModule,
