@@ -5,6 +5,8 @@ import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { FinanceComponent } from './finance/finance.component';
 import { LoginComponent } from './login/login.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+import { ProfilesiteComponent } from './profilesite/profilesite.component';
+import { TemplatesComponent } from './templates/templates.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -25,6 +27,14 @@ const routes: Routes = [
   {
     path: 'finance/addtrigger',
     component: AddtriggerComponent
+  },
+  {
+    path:'profilesite',
+    component: ProfilesiteComponent
+  },
+  {
+    path: 'templates',
+    component: TemplatesComponent
   }
 ];
 
