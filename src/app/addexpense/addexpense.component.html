@@ -3,18 +3,22 @@
         <div class = "formtitle">
             Add expense
         </div>
-        <!-- <form [formGroup]="addexp" class = "form" >
-            <input type = "text">
-            <input type = "number">
-        </form> -->
+        <form [formGroup]="addexp" class = "form" >
+            <input type = "text" placeholder="Enter Expense Name" class = "input">
+            <input type = "number" placeholder="Enter Expense Amount" class = "input">
+            <mat-form-field>
+                <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
+                <mat-select [(value)]="type"
+                    style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <mat-option value="x.name" *ngFor = "let x of catoptions">
+                        {{x.displayname}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            Upload receipt: (Optional)
+            <input type="file" id="file" (change)="receiptUpload($event.target.files)" class="input">
+            <div class = "submitbut">
+                Submit
+            </div>
+        </form>
     </div>
 </div>
-<!-- 
-// "@angular/cdk": "11.2.11",
-// "@angular/material": "^11.2.11",
-// "@ng-bootstrap/ng-bootstrap": "^9.0.2",
-// "angular-font-awesome": "^3.1.2",
-// "bootstrap": "^4.6.0",
-// "font-awesome": "^4.7.0",
-// "jquery": "^3.6.0",
-// "popper.js": "^1.16.1", -->
