@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { FinanceComponent } from './finance/finance.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
@@ -29,6 +30,12 @@ const routes: Routes = [
     path: 'finance/addtrigger',
     component: AddtriggerComponent
   },
+  {
+    path: 'home',
+    component: HomeComponent
+
+  },
+
   {
     path:'profilesite',
     component: ProfilesiteComponent

@@ -10,14 +10,14 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-cart-plus menuicon",
         "name": "Finance Management",
-        "link":"/add-items",
+        "link":"/finance",
     },
 
     {
         "role":"student",
         "class":"fa fa-cart-plus menuicon",
         "name": "Profile and Resume",
-        "link":"/add-items",
+        "link":"/templates",
     },
 
     {

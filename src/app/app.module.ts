@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth"
 
 
 import firebase from 'firebase/app';
@@ -67,7 +68,8 @@ export class HammerConfig extends HammerGestureConfig {
     AngularFirestoreModule,
     ChartsModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    AngularFireAuthModule
 
   ],
   providers: [],
