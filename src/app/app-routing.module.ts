@@ -6,6 +6,8 @@ import { FinanceComponent } from './finance/finance.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+import { ProfilesiteComponent } from './profilesite/profilesite.component';
+import { TemplatesComponent } from './templates/templates.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -30,6 +32,16 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+
+  },
+
+  {
+    path:'profilesite',
+    component: ProfilesiteComponent
+  },
+  {
+    path: 'templates',
+    component: TemplatesComponent
   }
 ];
 

@@ -27,6 +27,8 @@ import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { HomeComponent } from './home/home.component';
+import { ProfilesiteComponent } from './profilesite/profilesite.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -48,7 +50,9 @@ export class HammerConfig extends HammerGestureConfig {
     AddexpenseComponent,
     ResumeBuilderComponent,
     AddtriggerComponent,
-    HomeComponent
+    HomeComponent,
+    ProfilesiteComponent,
+    TemplatesComponent
   ],
   imports: [
     BrowserModule,
