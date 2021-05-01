@@ -1,0 +1,28 @@
+.main{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcont{
+    height: 80vh;
+    background-color: aquamarine;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.formtitle{
+    height: 10vh;
+    width: 100%;
+    background-color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 200%;
+} 
