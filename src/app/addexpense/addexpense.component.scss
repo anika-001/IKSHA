@@ -67,6 +67,29 @@ input:-webkit-autofill:active
     padding: 0.5% 5%;
     border-radius: 10px;
     align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
     cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .formcont{
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .formtitle{
+        font-size: 150%;
+    }
+
+    .form{
+        font-size: 100%;
+    }
+
+    .submitbut{
+        font-size: 150%;
+    }
 }
