@@ -1,5 +1,9 @@
 .main{
-    // background-color: aquamarine;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -35,7 +39,7 @@
     // border-left: black solid thin;
     // border-right: black solid thin;
     // border-top: solid black thin;
-    background: linear-gradient(to bottom, rgb(195, 255, 187), rgb(255, 255, 255));
+    background: linear-gradient(to bottom, cornflowerblue, rgb(255, 255, 255));
 }
 
 .logincard{
@@ -103,11 +107,11 @@
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
-/*input:-webkit-autofill:active
+input:-webkit-autofill:active
 {
-    // background-color: green;
- -webkit-box-shadow: 0 0 0 30px rgb(255, 255, 255) inset !important;
-}*/
+    background-color: white;
+ -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
 
 .logindeets{
     // background-color: cadetblue;
@@ -123,15 +127,16 @@ input:-webkit-autofill:focus,
     width: fit-content;
     padding: 0.5% 1%;
     font-size: 150%;
-    background-color: rgb(87, 184, 71);
+    background-color: cornflowerblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor: pointer;
     border: none;
     border-radius: 20px;
     width: 50%;
-    box-shadow: 5px 5px 5px rgb(172, 214, 166);
+    // box-shadow: 5px 5px 5px rgb(143, 175, 235);
 }
 
 .loginbutton:hover{
     box-shadow: none;
+    background-color: rgb(87, 139, 236);
 }
