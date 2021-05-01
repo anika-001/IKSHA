@@ -1,1 +1,31 @@
-<p>finance works!</p>
+<div class="main">
+    <div class="title">
+        Student Finance Management
+    </div>
+    <div class="addmanagement">
+        <a class = "addmanagebut" routerLink="/finance/addexpense">
+            Add Expense or add income
+        </a>
+        <div class = "addmanagebut">
+            Add Budget Triggers
+        </div>
+        <div class = "addmanagebut">
+            View Expense and savings
+        </div>
+    </div>
+    <div class="financestats">
+        <div class="chart" *ngFor="let x of chartdata">
+            <div class="charttitle">
+                Finances Category Wise
+            </div>
+            <div class="chartdiag" *ngIf="x.Type != 'bar'">
+                <canvas baseChart [data]="x.Data" [labels]="x.Label" [chartType]="x.Type"></canvas>
+            </div>
+            <div class="chartdiag" *ngIf="x.Type == 'bar'">
+                <canvas baseChart [datasets]="x.Data" [labels]="x.Label" [options]="x.Options" [legend]="x.Legend"
+                    [chartType]="x.Type">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
