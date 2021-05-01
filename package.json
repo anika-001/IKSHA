@@ -25,15 +25,10 @@
     "@angular/router": "~11.2.11",
     "bootstrap": "^4.6.0",
     "firebase": "^8.4.2",
-<<<<<<< HEAD
-    "pdfmake": "^0.1.71",
-=======
     "@ng-bootstrap/ng-bootstrap": "^9.0.2",
     "angular-font-awesome": "^3.1.2",
     "angular-hammer": "^2.2.0",
-    "bootstrap": "^4.6.0",
     "chart.js": "^2.9.3",
->>>>>>> 555830de3b03c715251fb574bc00fed457af9232
     "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3",
