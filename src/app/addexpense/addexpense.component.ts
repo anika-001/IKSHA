@@ -10,6 +10,7 @@ export class AddexpenseComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
+  type: string;
   addexp = this.fb.group({
     ExpenseName: [''],
     ExpenseCategory: [''],
