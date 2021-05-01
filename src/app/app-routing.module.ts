@@ -12,6 +12,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
+import { AddeventComponent } from './addevent/addevent.component';
 import {EventsComponent} from './events/events.component';
 const routes: Routes = [
   {
@@ -55,6 +56,10 @@ const routes: Routes = [
   {
     path: 'templates',
     component: TemplatesComponent
+  },
+  {
+    path: 'addevent',
+    component: AddeventComponent
   },
   {
     path:'events',
