@@ -10,7 +10,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
@@ -18,8 +17,12 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 
 import firebase from 'firebase/app';
+import { LoginComponent } from './login/login.component';
+
+//import { ProfilebuildComponent } from './profilebuild/profilebuild.component';
 import { FinanceComponent } from './finance/finance.component';
 import { AddexpenseComponent } from './addexpense/addexpense.component';
+import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -30,7 +33,8 @@ firebase.initializeApp(environment.firebaseConfig);
     AppComponent,
     LoginComponent,
     FinanceComponent,
-    AddexpenseComponent
+    AddexpenseComponent,
+    ResumeBuilderComponent
   ],
   imports: [
     BrowserModule,
