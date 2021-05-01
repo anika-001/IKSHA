@@ -10,6 +10,7 @@ import firebase from 'firebase/app';
 import { AngularFireModule } from "@angular/fire";
 import { LoginComponent } from './login/login.component';
 import { FinanceComponent } from './finance/finance.component';
+import { ManagementComponent } from './management/management.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -18,7 +19,8 @@ firebase.initializeApp(environment.firebaseConfig);
   declarations: [
     AppComponent,
     LoginComponent,
-    FinanceComponent
+    FinanceComponent,
+    ManagementComponent
   ],
   imports: [
     BrowserModule,

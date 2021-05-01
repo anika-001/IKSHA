@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-management',
+  templateUrl: './management.component.html',
+  styleUrls: ['./management.component.scss']
 })
 export class ManagementComponent implements OnInit {
 
@@ -11,4 +11,5 @@ export class ManagementComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
