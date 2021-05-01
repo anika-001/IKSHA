@@ -9,12 +9,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-<<<<<<< HEAD
  {
    path:'resume',
    component: ResumeBuilderComponent
- }
-=======
+ },
   {
     path: 'finance',
     component: FinanceComponent
@@ -23,7 +21,6 @@ const routes: Routes = [
     path: 'finance/addexpense',
     component: AddexpenseComponent
   }
->>>>>>> 555830de3b03c715251fb574bc00fed457af9232
 ];
 
 @NgModule({
