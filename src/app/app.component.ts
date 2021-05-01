@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Navbar, NavDrawer } from './jsonobjectsdata/navigation';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'educationapp';
+
+  opened: boolean = false;
+  user: any;
+  userEmail: any = "idkyet";
+  navdata: any;
+  navdrawerdata: any;
+  selectedRole: string = "student";
+  constructor(){}
+
+  ngOnInit(){
+    this.navdata = Navbar;
+    this.navdrawerdata = NavDrawer;
+  }
 }

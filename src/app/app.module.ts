@@ -1,7 +1,7 @@
 import { BrowserModule, HammerModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { Injectable, NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
-
+import * as Hammer from 'hammerjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -29,7 +29,15 @@ import { HomeComponent } from './home/home.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
-
+@Injectable({ providedIn: 'root' })
+export class HammerConfig extends HammerGestureConfig {
+  buildHammer(element: HTMLElement) {
+    let mc = new Hammer(element, {
+      touchAction: "pan-y",
+    });
+    return mc;
+  }
+}
 
 @NgModule({
   declarations: [
