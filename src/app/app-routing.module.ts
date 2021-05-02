@@ -15,6 +15,7 @@ import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import {EventsComponent} from './events/events.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ChatComponent } from './chat/chat.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -74,6 +75,10 @@ const routes: Routes = [
   {
     path: 'resume',
     component: ResumeComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   }
 ];
 
