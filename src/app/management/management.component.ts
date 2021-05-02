@@ -16,6 +16,7 @@ export class ManagementComponent implements OnInit {
   showform: boolean=false;
   todoshow: boolean=false;
   type: string;
+  date: string;
   addactorrem = this.fb.group({
     ActivityName: [''],
     ActivityTime: ['']
@@ -51,7 +52,10 @@ export class ManagementComponent implements OnInit {
     }
     console.log(this.days);
   }
-  toggle(val:boolean){
+  toggle(val:boolean, date: any){
+    if(val == true){
+      this.date = date;
+    }
     this.showform = val;
   }
   todoggle(val:boolean){
@@ -62,8 +66,9 @@ export class ManagementComponent implements OnInit {
     let data = this.addactorrem.value;
     console.log(data);
     data["type"] = this.type;
-    data["date"] = "12 May 2021"
-    this.toggle(false);
+    data["date"] = new Date(2021, 5, Number(this.date));
+    this.date = null;
+    this.toggle(false, null);
     this.db.collection("Management").doc(this.userID).collection(this.type).add(data).then(res => {
       console.log(res);
     })

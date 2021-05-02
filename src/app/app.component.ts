@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Navbar, NavDrawer } from './jsonobjectsdata/navigation';
+import { AuthService } from './Services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,19 @@ export class AppComponent implements OnInit {
   navdata: any;
   navdrawerdata: any;
   selectedRole: string = "student";
-  constructor(){}
+  userID: any;
+  useremail: any;
+  constructor(private as: AuthService){}
 
   ngOnInit(){
+
+    this.as.getUserState()
+    .subscribe(user => {
+      this.userID = user.uid;
+      this.userEmail = user.email;
+      //console.log(farm, id);
+    })
+
     this.navdata = Navbar;
     this.navdrawerdata = NavDrawer;
   }
