@@ -4,19 +4,18 @@
             Upload Schedule
         </div>
         <form [formGroup]="upsched" class = "form" >
-            <input type = "text" placeholder="Enter Schedule Name" class = "input">
-            <!-- <input type = "number" placeholder="Enter Expense Amount" class = "input"> -->
+            <input type = "text" placeholder="Enter Schedule Name" class = "input" formControlName = "ScheduleName">
             <mat-form-field>
                 <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
                 <mat-select [(value)]="type"
                     style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                    <mat-option value="x.name" *ngFor = "let x of typeoptions">
+                    <mat-option value="{{x.name}}" *ngFor = "let x of typeoptions">
                         {{x.displayname}}</mat-option>
                 </mat-select>
             </mat-form-field>
             Upload schedule: (Optional)
             <input type="file" id="file" (change)="receiptUpload($event.target.files)" class="input">
-            <div class = "submitbut">
+            <div class = "submitbut" (click) = "submitsch()">
                 Submit
             </div>
         </form>

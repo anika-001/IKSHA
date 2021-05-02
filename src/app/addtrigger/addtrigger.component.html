@@ -4,16 +4,16 @@
             Add Trigger
         </div>
         <form [formGroup]="addtrig" class = "form" >
-            <input type = "number" placeholder="Enter Trigger Amount" class = "input">
+            <input type = "number" placeholder="Enter Trigger Amount" class = "input" formControlName = "Amount">
             <mat-form-field>
                 <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
                 <mat-select [(value)]="type"
                     style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                    <mat-option value="x.name" *ngFor = "let x of catoptions">
+                    <mat-option value="{{x.name}}" *ngFor = "let x of catoptions">
                         {{x.displayname}}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <div class = "submitbut">
+            <div class = "submitbut" (click) = "submittrigger()">
                 Submit
             </div>
         </form>

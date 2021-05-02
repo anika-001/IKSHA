@@ -4,19 +4,19 @@
             Add expense
         </div>
         <form [formGroup]="addexp" class = "form" >
-            <input type = "text" placeholder="Enter Expense Name" class = "input">
-            <input type = "number" placeholder="Enter Expense Amount" class = "input">
+            <input type = "text" placeholder="Enter Expense Name" class = "input" formControlName = "ExpenseName">
+            <input type = "number" placeholder="Enter Expense Amount" class = "input" formControlName = "Amount">
             <mat-form-field>
                 <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
                 <mat-select [(value)]="type"
                     style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                    <mat-option value="x.name" *ngFor = "let x of catoptions">
+                    <mat-option value="{{x.name}}" *ngFor = "let x of catoptions">
                         {{x.displayname}}</mat-option>
                 </mat-select>
             </mat-form-field>
             Upload receipt: (Optional)
             <input type="file" id="file" (change)="receiptUpload($event.target.files)" class="input">
-            <div class = "submitbut">
+            <div class = "submitbut" (click) = "submitexpense()">
                 Submit
             </div>
         </form>
