@@ -128,6 +128,10 @@ const routes: Routes = [
   {
     path: 'expenses/view',
     component: ViewexpensesComponent
+  },
+  {
+    path: 'management/viewschedule',
+    component: ViewscheduleComponent
   }
 ];
 

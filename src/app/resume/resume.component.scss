@@ -11,53 +11,50 @@
 .title{
     height: 10vh;
     width: 100%;
-    //background-color: aquamarine;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 300%;
+    font-size: 200%;
+    color:rgb(255, 255, 255);
 }
 .addresume{
-    height: 15vh;
+    height: 10vh;
     width: 100%;
-    //background-color: bisque;
     display: flex;
     flex-direction: row;
-    // justify-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    font-size:100%;
+    padding-bottom: 3vh;
 }
 .templates{
     height: 75vh;
     width: 100vw;
-    //background-color: cadetblue;
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // font-size:200%;
 
 }
 .addresumebut{
     background-color: cornflowerblue;
-    // align-self: flex-end;
     align-self: center;
     width: fit-content;
-    font-size: 150%;
+    font-size: 120%;
     padding: 0.5% 2%;
-    // margin-right: 2%;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
+    border-style: solid;
+    border-color: white;
 }
 
 .templatesbut{
     height: 5vh;
-    // background-color: aquamarine;
+    padding-top: 5vh;
+    color: cornflowerblue;
+    font-weight: bold;
     font-size: 200%;
     text-align: center;
     display: flex;
@@ -69,7 +66,8 @@
     //reference: https://www.youtube.com/watch?v=dHHmFHI0pNw
     * {
         margin: 0;
-        padding: 0;
+        padding-top: 2vh;
+        //padding: 0;
         box-sizing: border-box;
     }
     .cards{

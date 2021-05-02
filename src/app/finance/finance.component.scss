@@ -10,22 +10,20 @@
 .title{
     height: 10vh;
     width: 100%;
-    // background-color: aquamarine;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 300%;
+    font-size: 200%;
+    color:rgb(255, 255, 255);
 }
-
 .addmanagement{
     height: 5vh;
     width: 100%;
-    // background-color: bisque;
     display: flex;
     flex-direction: row;
-    // justify-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -71,16 +69,16 @@
 
 .addmanagebut{
     background-color: cornflowerblue;
-    // align-self: flex-end;
     align-self: center;
     width: fit-content;
-    font-size: 150%;
+    font-size: 120%;
     padding: 0.5% 2%;
-    // margin-right: 2%;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
+    border-style: solid;
+    border-color: white;
 }
 
 @media(max-width: 700px) {

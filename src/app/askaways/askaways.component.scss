@@ -10,15 +10,14 @@
 .title {
     height: 10vh;
     width: 100%;
-    // background-color: cornflowerblue;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 300%;
-    color: white;
-    color: black;
+    font-size: 200%;
+    color:rgb(255, 255, 255);
 }
 
 .addask {
@@ -32,18 +31,16 @@
 
 .addaskbut {
     background-color: cornflowerblue;
-    // align-self: flex-end;
-    // align-self: center;
+    align-self: center;
     width: fit-content;
-    font-size: 150%;
-    padding: 0.5% 2%;
-    // margin-right: 2%;
+    font-size: 120%;
+    padding: 0.5% 1.5%;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
-    float: right;
-    margin-right: 2%;
+    border-style: solid;
+    border-color: white;
 }
 .content {
     height: 80vh;
