@@ -16,6 +16,7 @@ import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireAuthModule } from "@angular/fire/auth"
+import {AngularFireStorageModule } from "@angular/fire/storage"
 
 
 import firebase from 'firebase/app';
@@ -48,6 +49,10 @@ import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ResourceformComponent } from './resourceform/resourceform.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 import { HashtagComponent } from './hashtag/hashtag.component';
+import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforreview.component';
+import { AddresumeComponent } from './addresume/addresume.component';
+import { ViewpdfComponent } from './viewpdf/viewpdf.component';
+import { ReviewresumeComponent } from './reviewresume/reviewresume.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -90,7 +95,11 @@ export class HammerConfig extends HammerGestureConfig {
     AddquestionComponent,
     ResourceformComponent,
     ViewexpensesComponent,
-    HashtagComponent
+    HashtagComponent,
+    AddresumeforreviewComponent,
+    AddresumeComponent,
+    ViewpdfComponent,
+    ReviewresumeComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +114,8 @@ export class HammerConfig extends HammerGestureConfig {
     ChartsModule,
     MatSidenavModule,
     MatSelectModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
 
   ],
   providers: [],
