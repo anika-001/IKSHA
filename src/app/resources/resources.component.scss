@@ -19,18 +19,37 @@
     text-align: center;
     font-size: 300%;
 }
+// .thread{
+//     height: fit-content;
+//     width: 100vw;
+//     display: flex;
+//     flex-direction: row;
+//     background-color: springgreen;
+//     justify-content: space-evenly;
+//     padding-left: 20vw;
+// }
 .threadname{
-    height: 5vh;
-    width: 100%;
+    height:fit-content;
+    width: 100vw;
     background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: row;
-    //align-items: center;
     text-align: center;
     font-size: 100%;
-    // padding-left: 50vw;
     justify-content: center;
     font-size: 150%;
+}
+.addresource{
+    height: 5vh;
+    width: fit-content;
+    background-color:cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-right: 0.5%;
+    color: white;
 }
 .content{
     height: 85vh;

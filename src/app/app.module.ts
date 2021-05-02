@@ -45,6 +45,7 @@ import { TeamupcardsComponent } from './teamupcards/teamupcards.component';
 
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 import { AddquestionComponent } from './addquestion/addquestion.component';
+import { ResourceformComponent } from './resourceform/resourceform.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 
 
@@ -86,6 +87,7 @@ export class HammerConfig extends HammerGestureConfig {
  
     ViewscheduleComponent,
     AddquestionComponent,
+    ResourceformComponent,
     ViewexpensesComponent
   ],
   imports: [
