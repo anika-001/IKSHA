@@ -50,7 +50,7 @@ export let Navbar=[
 
     {
         "role":"student",
-        "class":"fa fa-cart-plus menuicon",
+        "class":"fa fa-comments menuicon",
         "name": "Chat",
         "link":"/add-items",
     },
