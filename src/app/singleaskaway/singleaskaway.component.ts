@@ -60,4 +60,12 @@ export class SingleaskawayComponent implements OnInit {
     })
   }
 
+  like(docid: string, likes: number){
+    this.db.collection("Questions").doc(this.id).collection("Answers").doc(docid).update({likes: likes + 1});
+  }
+
+  dislike(docid: string, dislikes: number){
+    this.db.collection("Questions").doc(this.id).collection("Answers").doc(docid).update({dislikes: dislikes + 1});
+  }
+
 }
