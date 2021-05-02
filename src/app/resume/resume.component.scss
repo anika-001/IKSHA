@@ -35,10 +35,10 @@
     width: 100vw;
     //background-color: cadetblue;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size:200%;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // justify-content: space-evenly;
+    // font-size:200%;
 
 }
 .addresumebut{
@@ -53,4 +53,18 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
+}
+
+.templatesbut{
+    height: 5vh;
+    // background-color: aquamarine;
+    font-size: 200%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resumes{
+    
 }
