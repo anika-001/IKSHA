@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { Map, latLng, tileLayer, Layer, marker, icon } from 'leaflet';
 @Component({
   selector: 'app-localeducators',
   templateUrl: './localeducators.component.html',
   styleUrls: ['./localeducators.component.scss']
 })
-//reference:https://www.youtube.com/watch?v=lkIRttJimsY
+//reference:https://www.youtube.com/watch?v=lkIRttJimsY    https://github.com/Asymmetrik/ngx-leaflet/issues/175
 
 export class LocaleducatorsComponent implements OnInit {
   private map: L.Map;
@@ -28,14 +29,16 @@ export class LocaleducatorsComponent implements OnInit {
       ).map(
         x => L.marker(x as L.LatLngExpression)
       ).forEach(
-        x => x.addTo(this.map)
+        x =>{ x.addTo(this.map).bindPopup('Educator Arjun <br> Science.')
+        .openPopup();}
       );
-
+      
+  
     tiles.addTo(this.map);
   }
 
-  constructor() { }
-
+ 
+ 
   ngOnInit(): void {
     this.initMap();
   }
