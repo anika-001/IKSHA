@@ -16,7 +16,7 @@
     <div class="financestats">
         <div class="chart" *ngFor="let x of chartdata">
             <div class="charttitle">
-                Finances Category Wise
+                {{x.Name}}
             </div>
             <div class="chartdiag" *ngIf="x.Type != 'bar'">
                 <canvas baseChart [data]="x.Data" [labels]="x.Label" [chartType]="x.Type"></canvas>
