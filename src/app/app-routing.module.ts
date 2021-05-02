@@ -25,6 +25,7 @@ import { ChatComponent } from './chat/chat.component';
 import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
 import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
+import {LocaleducatorsComponent} from './localeducators/localeducators.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -119,6 +120,10 @@ const routes: Routes = [
   {
     path: 'joinevent',
     component: TeamupcardsComponent
+  },
+  {
+    path: 'expenses/view',
+    component: ViewexpensesComponent
   },
   {
     path: 'expenses/view',
