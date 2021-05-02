@@ -36,18 +36,18 @@
             <div class = "formtitle">
                 Add expense
             </div>
-            <form [formGroup]="addexp" class = "form" >
-                <input type = "text" placeholder="Enter Name" class = "input">
-                <input type = "text" placeholder="Enter Time" class = "input">
+            <form [formGroup]="addactorrem" class = "form" >
+                <input type = "text" placeholder="Enter Name" class = "input" formControlName = "ActivityName">
+                <input type = "text" placeholder="Enter Time" class = "input" formControlName = "ActivityTime">
                 <mat-form-field>
                     <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
                     <mat-select [(value)]="type"
                         style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                        <mat-option value="x.name" *ngFor = "let x of catoptions">
+                        <mat-option value="{{x.name}}" *ngFor = "let x of catoptions">
                             {{x.displayname}}</mat-option>
                     </mat-select>
                 </mat-form-field>
-                <div class = "submitbut" (click)="toggle(false)">
+                <div class = "submitbut" (click)="submitactrem()">
                     Submit
                 </div>
             </form>
