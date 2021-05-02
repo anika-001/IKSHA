@@ -8,12 +8,16 @@ import { LoginComponent } from './login/login.component';
 import { ManagementComponent } from './management/management.component';
 import { UploadschedComponent } from './uploadsched/uploadsched.component';
 import { ResourcesComponent } from './resources/resources.component';
-
+import { AllresourcesComponent } from './allresources/allresources.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
-import {EventsComponent} from './events/events.component';
+import { EventsComponent } from './events/events.component';
+import { AskawaysComponent } from './askaways/askaways.component';
+import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
+import { TeamupformComponent } from './teamupform/teamupform.component';
+
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 const routes: Routes = [
@@ -46,6 +50,10 @@ const routes: Routes = [
     component: ResourcesComponent
   },
   {
+    path: 'allresources',
+    component: AllresourcesComponent
+  },
+  {
     path: 'home',
     component: HomeComponent
 
@@ -68,10 +76,21 @@ const routes: Routes = [
     component: EventsComponent
   },
   {
-
+    path: 'askaways',
+    component: AskawaysComponent
+  },
+  {
+    path: 'singleaskaway',
+    component: SingleaskawayComponent
+  },
+  {
+    path: 'teamupform',
+    component: TeamupformComponent
+  },
+  {
     path: 'resumeform',
     component: ResumeBuilderComponent
-  }, 
+  },
   {
     path: 'resume',
     component: ResumeComponent
