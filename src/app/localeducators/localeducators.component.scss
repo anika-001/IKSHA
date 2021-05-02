@@ -20,3 +20,6 @@
   #map {
     height: 100%;
   }
+  .leaflet-container.crosshair-cursor-enabled {
+    cursor:crosshair;
+}
