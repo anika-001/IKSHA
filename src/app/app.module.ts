@@ -38,6 +38,10 @@ import { AllresourcesComponent } from './allresources/allresources.component';
 import { AskawaysComponent } from './askaways/askaways.component';
 import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
 import { TeamupformComponent } from './teamupform/teamupform.component';
+//import { ChatroomComponent } from './chatroom/chatroom.component';
+import { ResumeComponent } from './resume/resume.component';
+import { ChatComponent } from './chat/chat.component';
+
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -70,7 +74,9 @@ export class HammerConfig extends HammerGestureConfig {
     AllresourcesComponent,
     AskawaysComponent,
     SingleaskawayComponent,
-    TeamupformComponent
+    TeamupformComponent,
+    ResumeComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

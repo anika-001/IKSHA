@@ -13,11 +13,13 @@ import { ResumeBuilderComponent } from './resume-builder/resume-builder.componen
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
-import {EventsComponent} from './events/events.component';
-import {AskawaysComponent} from './askaways/askaways.component';
-import {SingleaskawayComponent} from './singleaskaway/singleaskaway.component';
-import {TeamupformComponent} from './teamupform/teamupform.component';
+import { EventsComponent } from './events/events.component';
+import { AskawaysComponent } from './askaways/askaways.component';
+import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
+import { TeamupformComponent } from './teamupform/teamupform.component';
 
+import { ResumeComponent } from './resume/resume.component';
+import { ChatComponent } from './chat/chat.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -58,7 +60,7 @@ const routes: Routes = [
   },
 
   {
-    path:'profilesite',
+    path: 'profilesite',
     component: ProfilesiteComponent
   },
   {
@@ -70,20 +72,32 @@ const routes: Routes = [
     component: AddeventComponent
   },
   {
-    path:'events',
+    path: 'events',
     component: EventsComponent
   },
   {
-    path:'askaways',
+    path: 'askaways',
     component: AskawaysComponent
   },
   {
-    path:'singleaskaway',
+    path: 'singleaskaway',
     component: SingleaskawayComponent
   },
   {
-    path:'teamupform',
+    path: 'teamupform',
     component: TeamupformComponent
+  },
+  {
+    path: 'resumeform',
+    component: ResumeBuilderComponent
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   }
 ];
 
