@@ -1,0 +1,12 @@
+<div class = "main">
+    <div class = "formcont">
+        <div class = "formtitle">
+            Add question
+        </div>
+        <form [formGroup]="addques" class = "form" >
+            <input type = "text" placeholder="Enter Question" class = "input" formControlName = "Question">
+            <div class = "submitbut" (click) = "submit()">
+                Add
+            </div>
+        </form>
+    </div>

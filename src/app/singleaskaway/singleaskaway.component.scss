@@ -30,7 +30,7 @@
     //padding-top: 0.5%;
     font-size: 125%;
     background-color: rgb(255, 255, 255);
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
 }
 .descriptions{
     height: fit-content;
@@ -40,7 +40,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     //text-align: left;
-    font-size: 50%;
+    font-size: 100%;
+    margin-top: 2%;
     // border-style: solid;
     // border-color:rgb(255, 255, 255);
     justify-content:space-between;
@@ -53,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    font-size: 100%;
+    font-size: 200%;
     padding-left: 1vh;
 }
 .buttons{
@@ -84,4 +85,36 @@
 .text{
     text-align: left;
     padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+}
+
+.input{
+    margin: 2% 0;
+    outline: none;
+    border: none;
+    border-bottom: solid grey thin;
+    font-size: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input:focus{
+    border-bottom: solid thin cornflowerblue;
+}
+
+.answerbut{
+    background-color: cornflowerblue;
+    width: fit-content;
+    padding: 0.5% 5%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
 }
