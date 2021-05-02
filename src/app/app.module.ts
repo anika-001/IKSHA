@@ -27,6 +27,7 @@ import { ResumeBuilderComponent } from './resume-builder/resume-builder.componen
 import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { HomeComponent } from './home/home.component';
 
+
 firebase.initializeApp(environment.firebaseConfig);
 
 
@@ -39,7 +40,8 @@ firebase.initializeApp(environment.firebaseConfig);
     AddexpenseComponent,
     ResumeBuilderComponent,
     AddtriggerComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
