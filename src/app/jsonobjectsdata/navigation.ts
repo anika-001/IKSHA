@@ -3,7 +3,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-tasks menuicon",
         "name": "Activity tracker",
-        "link":"/add-items",
+        "link":"/management",
     },
 
     {
@@ -31,7 +31,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-commenting-o menuicon",
         "name": "Ask away",
-        "link":"/add-items",
+        "link":"/askaway",
     },
 
     {

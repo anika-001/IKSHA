@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-uploadsched',
@@ -8,37 +11,57 @@ import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@ang
 })
 export class UploadschedComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private as: AuthService, private db: AngularFirestore, private router: Router) { }
 
   receiptUpload: any;
 
   type: string;
   upsched = this.fb.group({
-    ScheuleName: [''],
-    ScheduleCategory: [''],
-    //Amount: ['']
+    ScheduleName: ['']
   })
 
   typeoptions = [
     {
-      name: "1",
+      name: "Daily",
       displayname: "Daily"
     },
     {
-      name: "2",
+      name: "Weekly",
       displayname: "Weekly"
     },
     {
-      name: "3",
+      name: "Monthly",
       displayname: "Monthly" 
     }
   ]
 
+  userID: any;
+
   ngOnInit(): void {
+
+    this.as.getUserState()
+      .subscribe(user => {
+        this.userID = user.uid;
+        //console.log(farm, id);
+      })
   }
 
-  // uploadreceipt(files: FileList) {
-  //   this.receiptUpload = files.item(0);
-  // }
+  submitsch(){
+    let data = this.upsched.value;
+    console.log(data);
+    data["type"] = this.type;
+    data["pdflink"] = "empty";
+    //data["date"] = new Date(2021, 5, Number(this.date));
+    //this.date = null;
+    //this.toggle(false, null);
+    this.db.collection("Management").doc(this.userID).collection("Schedule").add(data).then(res => {
+      this.router.navigate(['/management']);
+      console.log(res);
+    })
+    .catch(e => {
+
+    })
+  }
+
 }
 

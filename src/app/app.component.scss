@@ -93,12 +93,12 @@
     outline: none;
     text-decoration: none;
     background-color: var(--col4);
-    color: white;
+    color: rgb(22, 196, 172);
 }
 
 .nav-drawer-item-text{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    flex-basis: 52%;
+    flex-basis: 70%;
     //margin-left: -5%;
     text-align: left;
     //color: black;
@@ -186,11 +186,10 @@
 .nav-bar-right{
     display: flex;
     margin-right:10px;
-    flex-basis: 70%;
+    flex-basis: 80%;
     font-size: 1vw;
     align-content: center;
-    justify-content: space-evenly;
-    
+    justify-content: space-evenly;    
 }
 
 .nav-bar-item{
