@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="title">
+        Expenses and Triggers
+    </div>
+    <div style = "font-size: 200%; margin: 2% 0;">Total Expense: Rs {{total}}</div>
+    <div class="content">
+        <div>Expenses</div>
+        <div class="descriptions" *ngFor="let x of expenses">
+            <div class="name">
+                {{x.payload.doc.data().ExpenseName}}
+            </div>
+            <div class="type">
+                {{x.payload.doc.data().ExpenseCategory}}
+            </div>
+            <div class="type">
+                {{x.payload.doc.data().Amount}}
+            </div>
+            <div class="link">
+                Click to view receipt
+            </div>
+        </div>
+        <div style = "margin-top: 2%;">Triggers</div>
+        <div class="descriptions" *ngFor="let x of triggers">
+            <div class="name">
+                {{x.payload.doc.data().Amount}}
+            </div>
+            <div class="type">
+                {{x.payload.doc.data().Type}}
+            </div>
+        </div>
+    </div>
+</div>

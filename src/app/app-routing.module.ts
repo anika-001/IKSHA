@@ -23,6 +23,7 @@ import { ResourceformComponent } from './resourceform/resourceform.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 import { AddquestionComponent } from './addquestion/addquestion.component';
+import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -113,7 +114,11 @@ const routes: Routes = [
   {
     path: 'chat',
     component: ChatComponent
-  }
+  },
+  {
+    path: 'expenses/view',
+    component: ViewexpensesComponent
+  },
 ];
 
 @NgModule({

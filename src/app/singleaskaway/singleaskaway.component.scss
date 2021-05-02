@@ -70,17 +70,21 @@
     height:fit-content;
     width: fit-content;
     display:flex;
-    flex-wrap: wrap;
-    background-color: rgb(189, 182, 183);
+    // flex-wrap: wrap;
+    // background-color: rgb(189, 182, 183);
     cursor: pointer;
+    margin: 0 5%;
+    align-items: center;
 }
 .dislike{
     height:fit-content;
     width: fit-content;
     display:flex;
-    flex-wrap: wrap;
-    background-color: rgb(163, 164, 175);
+    // flex-wrap: wrap;
+    // background-color: rgb(163, 164, 175);
     cursor: pointer;
+    margin: 0 5%;
+    align-items: center;
 }
 .text{
     text-align: left;

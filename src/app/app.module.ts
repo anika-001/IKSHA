@@ -44,6 +44,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ResourceformComponent } from './resourceform/resourceform.component';
+import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -82,7 +83,8 @@ export class HammerConfig extends HammerGestureConfig {
     ChatComponent,
     ViewscheduleComponent,
     AddquestionComponent,
-    ResourceformComponent
+    ResourceformComponent,
+    ViewexpensesComponent
   ],
   imports: [
     BrowserModule,
