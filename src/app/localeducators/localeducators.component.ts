@@ -23,15 +23,23 @@ export class LocaleducatorsComponent implements OnInit {
       minZoom: 10,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-
+    var myIcon = L.icon({
+      iconUrl: '../../assets/img/mapslogo.png',
+      iconSize: [38, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      
+  });
     // create 5 random jitteries and add them to map
     const jittery = Array(5).fill(this.centroid).map( 
         x => [x[0] + (Math.random() - .5)/10, x[1] + (Math.random() - .5)/10 ]
       ).map(
         x => L.marker(x as L.LatLngExpression)
       ).forEach(
-        x =>{ x.addTo(this.map).bindPopup('Educator Arjun <br> Science.')
-        .openPopup();}
+        x =>{
+          
+          x.addTo(this.map).bindPopup('Educator Arjun <br> Science.')
+        .openPopup().setIcon(myIcon);}
       );
       
   
