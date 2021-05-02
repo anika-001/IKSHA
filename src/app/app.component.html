@@ -1,67 +1,70 @@
 <div class="common_main">
-  <mat-sidenav-container style="background-color: rgba(0, 0, 0, 0);">
-      <mat-sidenav #sidenav mode="over" [(opened)]="opened" class="nav-drawer">
-          <div class="nav-drawer-hamburger" (click)="sidenav.toggle();">
-              <i class="fa fa-bars"></i>
-          </div>
-          <div class="greeting" (swipeleft)="sidenav.toggle();">
-              <i class="fa fa-user menuicon"
-                  style="width: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 200%;"></i>
-              <div class="user">Welcome <br>{{ userEmail }} </div>
-          </div>
-          <div class="nav-drawer-items" (swipeleft)="sidenav.toggle();">
-              <div *ngFor="let i of navdrawerdata">
-                  <a class="nav-drawer-item"
-                      routerLink={{i.link}}>
-                      <i class={{i.class}}
-                          style="flex-basis: 20%; text-align: center; display: flex; flex-direction: column; justify-content: center;"></i>
-                      <div class="nav-drawer-item-text">{{i.name}}</div>
-                  </a>
-              </div>
-          </div>
-          <!-- </div>  -->
-      </mat-sidenav>
+    <mat-sidenav-container style="background-color: rgba(0, 0, 0, 0);">
+        <mat-sidenav #sidenav mode="over" [(opened)]="opened" class="nav-drawer">
+            <div class="nav-drawer-hamburger" (click)="sidenav.toggle();">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="greeting" (swipeleft)="sidenav.toggle();">
+                <i class="fa fa-user menuicon"
+                    style="width: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center; font-size: 200%;"></i>
+                <div class="user">Welcome <br>{{ userEmail }} </div>
+            </div>
+            <div class="nav-drawer-items" (swipeleft)="sidenav.toggle();">
+                <div *ngFor="let i of navdrawerdata">
+                    <a class="nav-drawer-item" routerLink={{i.link}}>
+                        <i class={{i.class}}
+                            style="flex-basis: 20%; text-align: center; display: flex; flex-direction: column; justify-content: center;"></i>
+                        <div class="nav-drawer-item-text">{{i.name}}</div>
+                    </a>
+                </div>
+                <a class="nav-drawer-item" (click)="logout()">
+                    <i class="fa fa-sign-in menuicon"
+                        style="flex-basis: 20%; text-align: center; display: flex; flex-direction: column; justify-content: center;"></i>
+                    <div class="nav-drawer-item-text">Logout</div>
+                </a>
+            </div>
+            <!-- </div>  -->
+        </mat-sidenav>
 
-      <mat-sidenav-content class="content">
+        <mat-sidenav-content class="content">
 
-          <div class="nav-bar html.translated-ltr">
-              <div class="nav-bar-left">
-                  <div class="nav-bar-hamburger" (click)="sidenav.toggle()">
-                      <i class="fa fa-bars"></i>
-                  </div>
-                  <div class="siteinfo">
-                      <div class="siteimage">
-                          <img src="../assets/img/logo.png" style="height: 100%; width: 100%;">
-                      </div>
-                      <a class="sitename" routerLink="/home">
-                          Iksha
-                      </a>
-                  </div>
+            <div class="nav-bar html.translated-ltr">
+                <div class="nav-bar-left">
+                    <div class="nav-bar-hamburger" (click)="sidenav.toggle()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="siteinfo">
+                        <div class="siteimage">
+                            <img src="../assets/img/logo.png" style="height: 100%; width: 100%;">
+                        </div>
+                        <a class="sitename" routerLink="/home">
+                            Iksha
+                        </a>
+                    </div>
 
-              </div>
-              <div class="nav-bar-right">
-                  <div *ngFor="let y of navdata" [ngClass]="{
+                </div>
+                <div class="nav-bar-right">
+                    <div *ngFor="let y of navdata" [ngClass]="{
                       'visi': selectedRole == y.role,
                       'nvisi': !(selectedRole == y.role)
                   }">
 
-                      <a class="nav-bar-item"
-                          routerLink={{y.link}}><i class={{y.class}}
-                              style="display: flex; flex-direction: column; justify-content: center; margin: 0 3px; font-size: 100%;"></i>
-                          <div class="nav-bar-item-text">{{y.name}}</div>
-                      </a>
-                  </div>
-              </div>
-          </div>
+                        <a class="nav-bar-item" routerLink={{y.link}}><i class={{y.class}}
+                                style="display: flex; flex-direction: column; justify-content: center; margin: 0 3px; font-size: 100%;"></i>
+                            <div class="nav-bar-item-text">{{y.name}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-          <div class="mainpage" (swipeleft)="sidenav.close()" (swiperight)="sidenav.open()">
-              <div class="mainpagecont">
-                  <router-outlet></router-outlet>
-              </div>
-              <!-- <app-footer></app-footer> -->
-          </div>
+            <div class="mainpage" (swipeleft)="sidenav.close()" (swiperight)="sidenav.open()">
+                <div class="mainpagecont">
+                    <router-outlet></router-outlet>
+                </div>
+                <!-- <app-footer></app-footer> -->
+            </div>
 
 
-      </mat-sidenav-content>
-  </mat-sidenav-container>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>

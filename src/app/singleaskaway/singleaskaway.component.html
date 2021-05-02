@@ -4,25 +4,29 @@
     </div>
     <div class="content">
         <div class="question">
-            Question:
+            {{question.payload.data().Question}}
         </div>
-        <div class="descriptions" *ngFor="let x of cards">
+        <div class="descriptions" *ngFor="let x of answers">
             <div class="text">
-                <div> {{x.num}} </div>
-                <div>username</div>
-                <div>resource link</div>
-                <div>description</div>
+                <div> {{x.payload.doc.data().Answer}} </div>
+                <div style = "font-size: 50%;">{{x.payload.doc.data().email}}</div>
             </div>
             <div class="buttons">
                 <div class="like">
-                    Like
+                    <div style = "font-size: 80%; margin-right: 5px;">{{x.payload.doc.data().likes}}</div>
+                    <i class="fa fa-thumbs-up" aria-hidden="true" (click) = "like(x.payload.doc.id, x.payload.doc.data().likes)"></i>
                 </div>
                 <div class="dislike">
-                    Dislike
+                    <div style = "font-size: 80%; margin-right: 5px;">{{x.payload.doc.data().dislikes}}</div>
+                    <i class="fa fa-thumbs-down" aria-hidden="true" (click) = "dislike(x.payload.doc.id, x.payload.doc.data().dislikes)"></i>
                 </div>
             </div>
             
         </div>
+        <form [formGroup] = "addans" style = "display: flex; flex-direction: column; justify-content: center;">
+            <input placeholder = "Your Answer" class = "input" formControlName = "Answer">
+            <div class = "answerbut" (click) = "answer()">Answer</div>
+        </form>
 
     </div>
 </div>

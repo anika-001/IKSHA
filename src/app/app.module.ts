@@ -43,6 +43,9 @@ import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 import { TeamupcardsComponent } from './teamupcards/teamupcards.component';
 
+import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
+import { AddquestionComponent } from './addquestion/addquestion.component';
+import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -81,6 +84,9 @@ export class HammerConfig extends HammerGestureConfig {
     ChatComponent,
     TeamupcardsComponent,
  
+    ViewscheduleComponent,
+    AddquestionComponent,
+    ViewexpensesComponent
   ],
   imports: [
     BrowserModule,
