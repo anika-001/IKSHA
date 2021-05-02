@@ -52,7 +52,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-comments menuicon",
         "name": "Chat",
-        "link":"/add-items",
+        "link":"/chat",
     },
     
 ]
