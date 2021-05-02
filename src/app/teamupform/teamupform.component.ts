@@ -19,5 +19,12 @@ export class TeamupformComponent implements OnInit {
   })
   ngOnInit(): void {
   }
+  submit(){
+    let data = this.addexp.value;
+    console.log(data);
+    this.db.collection("").doc(this.userID).collection("").add(data).then(res => {
+      this.router.navigate(['/teamupform']);
+      console.log(res);
+    }
 
 }

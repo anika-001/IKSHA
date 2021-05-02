@@ -8,20 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { ManagementComponent } from './management/management.component';
 import { UploadschedComponent } from './uploadsched/uploadsched.component';
 import { ResourcesComponent } from './resources/resources.component';
-import { AllresourcesComponent } from './allresources/allresources.component';
+
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
-import { EventsComponent } from './events/events.component';
-import { AskawaysComponent } from './askaways/askaways.component';
-import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
-import { TeamupformComponent } from './teamupform/teamupform.component';
-import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
-
+import {EventsComponent} from './events/events.component';
 import { ResumeComponent } from './resume/resume.component';
-import { ChatComponent } from './chat/chat.component';
-import { AddquestionComponent } from './addquestion/addquestion.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -48,16 +41,8 @@ const routes: Routes = [
     component: UploadschedComponent
   },
   {
-    path: 'management/viewschedule',
-    component: ViewscheduleComponent
-  },
-  {
     path: 'resources',
     component: ResourcesComponent
-  },
-  {
-    path: 'allresources',
-    component: AllresourcesComponent
   },
   {
     path: 'home',
@@ -66,7 +51,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'profilesite',
+    path:'profilesite',
     component: ProfilesiteComponent
   },
   {
@@ -78,37 +63,14 @@ const routes: Routes = [
     component: AddeventComponent
   },
   {
-    path: 'events',
+    path:'events',
     component: EventsComponent
   },
   {
-    path: 'askaway',
-    component: AskawaysComponent
+    path:'resume',
+    component:ResumeComponent
   },
-  {
-    path: 'askaway/ask',
-    component: SingleaskawayComponent
-  },
-  {
-    path: 'askaway/add',
-    component: AddquestionComponent
-  },
-  {
-    path: 'teamupform',
-    component: TeamupformComponent
-  },
-  {
-    path: 'resumeform',
-    component: ResumeBuilderComponent
-  },
-  {
-    path: 'resume',
-    component: ResumeComponent
-  },
-  {
-    path: 'chat',
-    component: ChatComponent
-  }
+   
 ];
 
 @NgModule({
