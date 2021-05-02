@@ -60,8 +60,11 @@
             <div class = "formtitle">
                 Add your list
             </div>
-            <form [formGroup]="todoform" class = "form" >
-                <input type = "text" placeholder="Enter Name" class = "input">
+            <form [formGroup]="todoform" class = "form"  *ngFor = "let x of reminder">
+                <div style = "display: flex; justify-content: space-evenly;">
+                    <input type = "checkbox" placeholder="Enter Name" class = "input">
+                    <label>{{x.payload.doc.data().ActivityName}} on 3rd May 2021 at {{x.payload.doc.data().ActivityTime}}</label>
+                </div>
                 <div class = "submitbut" (click)="todoggle(false)">
                     Done
                 </div>

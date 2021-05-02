@@ -52,6 +52,7 @@ import { HashtagComponent } from './hashtag/hashtag.component';
 import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforreview.component';
 import { AddresumeComponent } from './addresume/addresume.component';
 import { ViewpdfComponent } from './viewpdf/viewpdf.component';
+import { ReviewresumeComponent } from './reviewresume/reviewresume.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -97,7 +98,8 @@ export class HammerConfig extends HammerGestureConfig {
     HashtagComponent,
     AddresumeforreviewComponent,
     AddresumeComponent,
-    ViewpdfComponent
+    ViewpdfComponent,
+    ReviewresumeComponent
   ],
   imports: [
     BrowserModule,

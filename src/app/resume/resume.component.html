@@ -26,7 +26,7 @@
 
         <div class="cards">
            <div  *ngFor="let x of resumes">
-            <label>
+            <label *ngIf = "x.payload.doc.data().AddedForReview == 'Yes'">
                 <!-- <div> -->
                     <input type="checkbox" />
                     <div class="flip-card">

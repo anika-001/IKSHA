@@ -25,6 +25,8 @@ export class ManagementComponent implements OnInit {
     TodoName: ['']
   })
 
+  reminder: any;
+
   catoptions = [
     {
       name: "Activity",
@@ -43,6 +45,7 @@ export class ManagementComponent implements OnInit {
     this.as.getUserState()
       .subscribe(user => {
         this.userID = user.uid;
+        this.getReminders();
         //console.log(farm, id);
       })
 
@@ -60,6 +63,12 @@ export class ManagementComponent implements OnInit {
   }
   todoggle(val:boolean){
     this.todoshow = val;
+  }
+
+  getReminders(){
+    this.db.collection("Management").doc(this.userID).collection("Reminder").snapshotChanges().subscribe(res => {
+      this.reminder = res;
+    })
   }
 
   submitactrem(){
