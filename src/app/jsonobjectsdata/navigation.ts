@@ -102,14 +102,14 @@ export let NavDrawer=[
 
     {
         "role":"student",
-        "class":"fa fa-cart-plus menuicon",
+        "class":"fa fa-calendar-check-o menuicon",
         "name": "Events and opportunities",
         "link":"/add-items",
     },
 
     {
         "role":"student",
-        "class":"fa fa-cart-plus menuicon",
+        "class":"fa fa-comments  menuicon",
         "name": "Chat",
         "link":"/add-items",
     },
