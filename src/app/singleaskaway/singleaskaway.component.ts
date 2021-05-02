@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-resources',
-  templateUrl: './resources.component.html',
-  styleUrls: ['./resources.component.scss']
+  selector: 'app-singleaskaway',
+  templateUrl: './singleaskaway.component.html',
+  styleUrls: ['./singleaskaway.component.scss']
 })
-export class ResourcesComponent implements OnInit {
+export class SingleaskawayComponent implements OnInit {
 
   constructor() { }
-
   cards: any[] = [];
 
   ngOnInit(): void {

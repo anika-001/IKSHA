@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .title{
     height: 10vh;
@@ -18,19 +17,6 @@
     align-items: center;
     text-align: center;
     font-size: 300%;
-}
-.threadname{
-    height: 5vh;
-    width: 100%;
-    background-color: rgb(230, 230, 230);
-    display: flex;
-    flex-direction: row;
-    //align-items: center;
-    text-align: center;
-    font-size: 100%;
-    // padding-left: 50vw;
-    justify-content: center;
-    font-size: 150%;
 }
 .content{
     height: 85vh;
@@ -45,7 +31,7 @@
     justify-content: space-evenly;
 }
 .descriptions{
-    height: fit-content;
+    height: 8%;
     width: 100%;
     background-color:rgb(230, 230, 230);
     display: flex;
@@ -53,34 +39,23 @@
     flex-wrap: wrap;
     //text-align: left;
     font-size: 50%;
-    // border-style: solid;
-    // border-color:rgb(255, 255, 255);
-    justify-content:space-between;
+    justify-content: space-between;
+    padding: 1.5% 2%;
 }
-.buttons{
+.threads{
     height:fit-content;
-    width: 10%;
+    width: fit-content;
+    text-align: left;
+    font-size: 140%;
+    background-color: darkgrey;
+}
+.userno{
+    height:fit-content;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-right: 3%;
-    padding-top: 5%;
-}
-.like{
-    height:fit-content;
-    width: fit-content;
-    display:flex;
-    flex-wrap: wrap;
-    background-color: rgb(189, 182, 183);
-}
-.dislike{
-    height:fit-content;
-    width: fit-content;
-    display:flex;
-    flex-wrap: wrap;
-    background-color: rgb(163, 164, 175);
-}
-.text{
-    text-align: left;
-    padding-left: 3%;
+    //justify-content: space-between;
+    // padding-right: 3%;
+    // padding-top: 1%;
+    background-color: darkgrey;
 }
