@@ -17,7 +17,11 @@ export class ResumeBuilderComponent implements OnInit {
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phone: '',
-      experienceBlocks: this.formBuilder.array([this.buildExperienceBlock()])
+      experienceBlocks: this.formBuilder.array([this.buildExperienceBlock()]),
+      skill1:[''],
+      skill2:[''],
+      skill3:[''],
+      skill4:['']
     });
   }
 
@@ -47,6 +51,10 @@ export class ResumeBuilderComponent implements OnInit {
       startDate: this.resumeBuilderForm.controls.experienceBlocks.value[0].startDate,
       endDate: this.resumeBuilderForm.controls.experienceBlocks.value[0].endDate,
       description: this.resumeBuilderForm.controls.experienceBlocks.value[0].description,
+      skill1: this.resumeBuilderForm.get('skill1').value,
+      skill2: this.resumeBuilderForm.get('skill2').value,
+      skill3: this.resumeBuilderForm.get('skill3').value,
+      skill4: this.resumeBuilderForm.get('skill4').value,
     } })
   }
 

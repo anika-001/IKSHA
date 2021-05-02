@@ -4,12 +4,13 @@
             Team Up!
         </div>
         <form [formGroup]="teamup" class = "form" >
-            <input type = "text" placeholder="Enter Occassion" class = "input">
-            <input type = "text" placeholder="Enter Description" class = "input">
-            <input type = "text" placeholder="Enter email-id" class = "input">
-            <div class = "submitbut">
+            <input type = "text" placeholder="Enter Occassion" class = "input" formControlName="OccassionName">
+            <input type = "text" placeholder="Enter Description" class = "input" formControlName="DescriptionName">
+            <input type = "text" placeholder="Enter email-id" class = "input" formControlName="Emailid">
+            <div class = "submitbut" (click)="submitform()">
                 Submit
             </div>
+                
         </form>
     </div>
 </div>

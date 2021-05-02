@@ -5,27 +5,29 @@
         <div class="threadname">
             Image Processing Resources
         </div>
-        <a class="addresource" routerLink="/resources/resourceform">
-            Add Resource
-        </a>
     <div class="content">
-        <div class="descriptions" *ngFor="let x of cards">
+        <div class="descriptions" *ngFor="let x of resources">
             <div class="text">
-                <div> {{x.num}} </div>
-                <div>username</div>
-                <div>resource link</div>
-                <div>description</div>
+                <a href = "{{x.payload.doc.data().Link}}"> {{x.payload.doc.data().Link}} </a>
+                <div> {{x.payload.doc.data().Description}} </div>
+                <div style = "font-size: 50%;">{{x.payload.doc.data().email}}</div>
             </div>
             <div class="buttons">
                 <div class="like">
-                    Like
+                    <div style = "font-size: 80%; margin-right: 5px;">{{x.payload.doc.data().likes}}</div>
+                    <i class="fa fa-thumbs-up" aria-hidden="true" (click) = "like(x.payload.doc.id, x.payload.doc.data().likes)"></i>
                 </div>
                 <div class="dislike">
-                    Dislike
+                    <div style = "font-size: 80%; margin-right: 5px;">{{x.payload.doc.data().dislikes}}</div>
+                    <i class="fa fa-thumbs-down" aria-hidden="true" (click) = "dislike(x.payload.doc.id, x.payload.doc.data().dislikes)"></i>
                 </div>
             </div>
             
         </div>
-
+        <form [formGroup] = "addres" style = "display: flex; flex-direction: column; justify-content: center;">
+            <input placeholder = "Add Link" class = "input" formControlName = "Link">
+            <input placeholder = "Add Description" class = "input" formControlName = "Description">
+            <div class = "answerbut" (click) = "answer()">Add</div>
+        </form>
     </div>
 </div>

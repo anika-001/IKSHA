@@ -24,7 +24,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-info-circle menuicon",
         "name": "Resources",
-        "link":"/add-items",
+        "link":"/allresources",
     },
 
     {
@@ -38,14 +38,14 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-users menuicon",
         "name": "Team up",
-        "link":"/add-items",
+        "link":"/joinevent",
     },
 
     {
         "role":"student",
         "class":"fa fa-calendar-check-o menuicon",
         "name": "Events and opportunities",
-        "link":"/add-items",
+        "link":"/events",
     },
 
     {
