@@ -11,11 +11,11 @@
           </div>
           <div class="nav-drawer-items" (swipeleft)="sidenav.toggle();">
               <div *ngFor="let i of navdrawerdata">
-                  <a class="nav-drawer-item" *ngIf="!(url == '/signin' && i.name !='Home') && selectedRole == i.role"
-                      routerLink={{i.link}} (click)="i.func()">
+                  <a class="nav-drawer-item"
+                      routerLink={{i.link}}>
                       <i class={{i.class}}
-                          style="flex-basis: 45%; text-align: center; display: flex; flex-direction: column; justify-content: center;"></i>
-                      <div class="nav-drawer-item-text">{{i.name}} &#8594;</div>
+                          style="flex-basis: 20%; text-align: center; display: flex; flex-direction: column; justify-content: center;"></i>
+                      <div class="nav-drawer-item-text">{{i.name}}</div>
                   </a>
               </div>
           </div>

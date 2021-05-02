@@ -3,7 +3,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-cart-plus menuicon",
         "name": "Activity tracker",
-        "link":"/add-items",
+        "link":"/management",
     },
 
     {
