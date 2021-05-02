@@ -13,8 +13,19 @@ import { ResumeBuilderComponent } from './resume-builder/resume-builder.componen
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
-import {EventsComponent} from './events/events.component';
+import { EventsComponent } from './events/events.component';
+import { AskawaysComponent } from './askaways/askaways.component';
+import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
+import { TeamupformComponent } from './teamupform/teamupform.component';
+import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
+import { ResourceformComponent } from './resourceform/resourceform.component';
+
 import { ResumeComponent } from './resume/resume.component';
+import { ChatComponent } from './chat/chat.component';
+import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
+import { AddquestionComponent } from './addquestion/addquestion.component';
+import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
+import { AllresourcesComponent } from './allresources/allresources.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -45,6 +56,14 @@ const routes: Routes = [
     component: ResourcesComponent
   },
   {
+    path: 'allresources',
+    component: AllresourcesComponent
+  },
+  {
+    path: 'resources/resourceform',
+    component: ResourceformComponent
+  },
+  {
     path: 'home',
     component: HomeComponent
 
@@ -70,7 +89,34 @@ const routes: Routes = [
     path:'resume',
     component:ResumeComponent
   },
-   
+  {
+    path: 'askaway/add',
+    component: AddquestionComponent
+  },
+  {
+    path: 'teamupform',
+    component: TeamupformComponent
+  },
+  {
+    path: 'resumeform',
+    component: ResumeBuilderComponent
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
+  },
+  {
+    path: 'joinevent',
+    component: TeamupcardsComponent
+  },
+  {
+    path: 'expenses/view',
+    component: ViewexpensesComponent
+  }
 ];
 
 @NgModule({

@@ -38,7 +38,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-users menuicon",
         "name": "Team up",
-        "link":"/add-items",
+        "link":"/joinevent",
     },
 
     {

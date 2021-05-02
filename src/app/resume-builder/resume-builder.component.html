@@ -96,8 +96,12 @@
           </span>
         </div>
       </div>
+      
+     
+    
 
-      <br />
+
+   
       <div class="flexContainer">
         <h5>Experience</h5>
         <svg (click)="addExperience()">
@@ -192,6 +196,75 @@
           <hr *ngIf="i !== experienceBlocks.controls.length - 1" />
         </div>
       </div>
+      <br />
+      <div class="flexContainer">
+        <div class="form-group col-md-5">
+          <label for="skill1Id">Skill-1</label>
+          <input
+            class="form-control"
+            id="skill1Id"
+            type="text"
+            placeholder="Skill-1"
+            formControlName="skill1"
+            [ngClass]="{
+              'is-invalid':
+                (resumeBuilderForm.get('skill1').touched ||
+                  resumeBuilderForm.get('skill1').dirty) &&
+                !resumeBuilderForm.get('skill1').valid
+            }"
+          />
+
+          <label for="skill2Id">Skill-2</label>
+          <input
+            class="form-control"
+            id="skill2Id"
+            type="text"
+            placeholder="Skill-2"
+            formControlName="skill2"
+            [ngClass]="{
+              'is-invalid':
+                (resumeBuilderForm.get('skill2').touched ||
+                  resumeBuilderForm.get('skill2').dirty) &&
+                !resumeBuilderForm.get('skill2').valid
+            }"
+          />
+          <label for="skill3Id">Skill-3</label>
+          <input
+            class="form-control"
+            id="skill3Id"
+            type="text"
+            placeholder="Skill-3"
+            formControlName="skill3"
+            [ngClass]="{
+              'is-invalid':
+                (resumeBuilderForm.get('skill3').touched ||
+                  resumeBuilderForm.get('skill3').dirty) &&
+                !resumeBuilderForm.get('skill3').valid
+            }"
+          />
+          <label for="skill4Id">Skill-4</label>
+          <input
+            class="form-control"
+            id="skill4Id"
+            type="text"
+            placeholder="Skill-4"
+            formControlName="skill4"
+            [ngClass]="{
+              'is-invalid':
+                (resumeBuilderForm.get('skill4').touched ||
+                  resumeBuilderForm.get('skill4').dirty) &&
+                !resumeBuilderForm.get('skill4').valid
+            }"
+          />
+        </div>
+       
+      </div>
+
+
+
+      <br/>
+
+
       <button
         class="btn btn-primary"
         type="submit"

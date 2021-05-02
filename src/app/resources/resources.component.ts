@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-resources',
