@@ -1,1 +1,20 @@
-<p>reviewresume works!</p>
+<div class="main">
+    <div class="title">
+        Activity Tracker
+    </div>
+    <div class = "submitbut" (click) = "gotoresume()" style = "margin-top: 15px;">
+        View resume
+    </div>
+    <form [formGroup] = "addrev" class = "addinput">
+        <input placeholder = "Add a review" type = "text" class = "input" formControlName = "Review">
+        <div class = "submitbut" (click) = "addreview()">
+            Submit
+        </div>
+    </form>
+    <div style = "width: 100%; font-size: 200%; text-align: center;">Reviews</div>
+    <div class = "reviewss" *ngFor = "let x of reviews">
+        <div style = "font-size: 200%;">{{x.payload.doc.data().Review}}</div>
+        <div style = "font-weight: bold;">{{x.payload.doc.data().email}}</div>
+
+    </div>
+</div>

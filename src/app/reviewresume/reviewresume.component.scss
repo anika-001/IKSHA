@@ -1,0 +1,65 @@
+.main{
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.title{
+    height: 10vh;
+    width: 100%;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 200%;
+    color:white;
+}
+
+.input{
+    margin: 2% 0;
+    outline: none;
+    border: none;
+    border-bottom: solid grey thin;
+    font-size: 100%;
+    height: 5vh;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input:focus{
+    border-bottom: solid thin cornflowerblue;
+}
+.addinput{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submitbut{
+    background-color: cornflowerblue;
+    width: fit-content;
+    padding: 0.5% 5%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.reviewss{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2%;
+    // align-items: center;
+}
