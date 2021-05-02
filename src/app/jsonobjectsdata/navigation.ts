@@ -119,4 +119,10 @@ export let NavDrawer=[
         "name": "Chat",
         "link":"/add-items",
     },
+    {
+        "role":"student",
+        "class":"fa fa-book menuicon",
+        "name": "LocalEdu",
+        "link":"/localeducators",
+    }
 ]
