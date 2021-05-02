@@ -26,11 +26,11 @@ export class ManagementComponent implements OnInit {
 
   catoptions = [
     {
-      name: "1",
+      name: "Activity",
       displayname: "Activity"
     },
     {
-      name: "2",
+      name: "Reminder",
       displayname: "Reminder"
     }
   ]
