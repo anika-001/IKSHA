@@ -42,7 +42,7 @@
                             <hr />
                             <p>{{x.payload.doc.data().Description}}</p>
                             <hr />
-                            <button type="button" class="btn btn-primary">Review</button>
+                            <button type="button" class="btn btn-primary" (click) = "reviewresume(x.payload.doc.data().Link, x.payload.doc.id)">Review</button>
                             <p class="click">Click to flip</p>
                         </div>
                     </div>

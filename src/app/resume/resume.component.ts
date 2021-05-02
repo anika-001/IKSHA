@@ -44,5 +44,9 @@ export class ResumeComponent implements OnInit {
     this.router.navigate(['/pdf'], { queryParams: {url: this.resume.payload.doc.data().Link}});
   }
 
+  reviewresume(url: string, id: string){
+    this.router.navigate(['/resume/review'], { queryParams: {url: url, id: id}});
+  }
+
   
 }

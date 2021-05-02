@@ -31,6 +31,7 @@ import { AddresumeComponent } from './addresume/addresume.component';
 import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforreview.component';
 import { ViewpdfComponent } from './viewpdf/viewpdf.component';
 import {LocaleducatorsComponent} from './localeducators/localeducators.component';
+import { ReviewresumeComponent } from './reviewresume/reviewresume.component';
 
 const routes: Routes = [
   {
@@ -153,6 +154,10 @@ const routes: Routes = [
   {
     path: 'localeducators',
     component: LocaleducatorsComponent
+  },
+  {
+    path: 'resume/review',
+    component: ReviewresumeComponent
   }
 ];
 
