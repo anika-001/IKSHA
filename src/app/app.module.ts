@@ -35,6 +35,8 @@ import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { EventsComponent } from './events/events.component';
 //import { ChatroomComponent } from './chatroom/chatroom.component';
+import { ResumeComponent } from './resume/resume.component';
+
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -64,7 +66,7 @@ export class HammerConfig extends HammerGestureConfig {
     TemplatesComponent,
     AddeventComponent,
     EventsComponent,
-    //ChatroomComponent
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

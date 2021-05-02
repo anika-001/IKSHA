@@ -14,6 +14,7 @@ import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import {EventsComponent} from './events/events.component';
+import { ResumeComponent } from './resume/resume.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path:'events',
     component: EventsComponent
+  },
+  {
+    path:'resume',
+    component:ResumeComponent
   }
 ];
 
