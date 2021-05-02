@@ -1,7 +1,7 @@
 <div class="main">
   <div class="title">Event and Opportunities</div>
   <div class="addask">
-    <div class="addaskbut" routerLink="/addevent">
+    <div class="addaskbut">
       Add a Event
     </div>
   </div>
@@ -12,7 +12,7 @@
         <h5 class="card-title">{{x.payload.doc.data().EventName}}</h5>
         <p class="card-text">{{x.payload.doc.data().Link}}</p>
         <p class="card-text">{{x.payload.doc.data().email}}</p>
-        <a (click) = "submit(x.payload.doc.data().Hashtag)" class="btn btn-primary">{{x.payload.doc.data().Hashtag}}</a>
+        <a (click) = "submit(x.payload.doc.data().Hashtag)" class="btn btn-primary">#{{x.payload.doc.data().Hashtag}}</a>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@ export class EventsComponent implements OnInit {
   }
 
   submit(hashtag: string){
-    this.router.navigate(['/events/hashtag', { queryParams: {hastag: hashtag}}]);
+    this.router.navigate(['/events/hashtag'], { queryParams: {hashtag: hashtag}});
   }
 
 }
