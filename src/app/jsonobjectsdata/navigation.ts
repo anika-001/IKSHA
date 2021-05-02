@@ -56,7 +56,7 @@ export let Navbar=[
     },
     {
         "role":"student",
-        "class":"fa fa-comments menuicon",
+        "class":"fa fa-book menuicon",
         "name": "LocalEdu",
         "link":"/localeducators",
     }
