@@ -34,6 +34,7 @@ import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { EventsComponent } from './events/events.component';
+//import { ChatroomComponent } from './chatroom/chatroom.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 
