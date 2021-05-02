@@ -9,14 +9,14 @@
         <div class = "addmanagebut" routerLink="/finance/addtrigger">
             Add Budget Triggers
         </div>
-        <div class = "addmanagebut">
+        <div class = "addmanagebut" routerLink="/expenses/view">
             View Expense and savings
         </div>
     </div>
     <div class="financestats">
         <div class="chart" *ngFor="let x of chartdata">
             <div class="charttitle">
-                Finances Category Wise
+                {{x.Name}}
             </div>
             <div class="chartdiag" *ngIf="x.Type != 'bar'">
                 <canvas baseChart [data]="x.Data" [labels]="x.Label" [chartType]="x.Type"></canvas>

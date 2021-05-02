@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { Map, latLng, tileLayer, Layer, marker, icon } from 'leaflet';
+
 @Component({
   selector: 'app-localeducators',
   templateUrl: './localeducators.component.html',

@@ -1,0 +1,15 @@
+<div class = "main">
+    <div class = "formcont">
+        <div class = "formtitle">
+            Add expense
+        </div>
+        <form [formGroup]="addresdeets" class = "form" >
+            <input type = "text" placeholder="About you" class = "input" formControlName = "Description">
+            <input type = "text" placeholder="Profession" class = "input" formControlName = "Profession">
+            <input type = "text" placeholder="Name" class = "input" formControlName = "Name">
+            <div class = "submitbut" (click) = "submit()">
+                Submit
+            </div>
+        </form>
+    </div>
+</div>

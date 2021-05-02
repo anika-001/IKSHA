@@ -1,0 +1,14 @@
+<div class = "main">
+    <div class = "formcont">
+        <div class = "formtitle">
+            Add expense
+        </div>
+        <form class = "form" >
+            Upload resume:
+            <input type="file" id="file" (change)="uploadresume($event.target.files)" class="input">
+            <div class = "submitbut" (click) = "submit()">
+                Submit
+            </div>
+        </form>
+    </div>
+</div>

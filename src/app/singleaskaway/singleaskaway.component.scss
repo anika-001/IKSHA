@@ -17,8 +17,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 300%;
-    color: white;
+    font-size: 200%;
+    color:rgb(255, 255, 255);
 }
 .content{
     height: 85vh;
@@ -49,13 +49,16 @@
 .question{
     height: 10vh;
     width: 100%;
-    background-color: rgb(22, 196, 172);
+    background-color: rgb(255, 255, 255);
+    color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     font-size: 200%;
-    padding-left: 1vh;
+    padding: 1.5% 1.5%;
+    border-style: solid;
+    border-color: white;
 }
 .buttons{
     height:fit-content;

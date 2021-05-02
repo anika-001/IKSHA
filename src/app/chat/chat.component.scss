@@ -10,13 +10,14 @@
 .title{
     height: 10vh;
     width: 100%;
-    //background-color: aquamarine;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 200%;
+    color:rgb(255, 255, 255);
 }
 .chat2{
     height: 90vh;
@@ -54,7 +55,6 @@
 .chatname{
     height:15;
     width:20%;
-    //background-color: blueviolet;
     margin-right:77%;
     margin-bottom:3%;
     flex-direction: column;
