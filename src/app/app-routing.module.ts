@@ -21,6 +21,7 @@ import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
+import { AddquestionComponent } from './addquestion/addquestion.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -81,12 +82,16 @@ const routes: Routes = [
     component: EventsComponent
   },
   {
-    path: 'askaways',
+    path: 'askaway',
     component: AskawaysComponent
   },
   {
-    path: 'singleaskaway',
+    path: 'askaway/ask',
     component: SingleaskawayComponent
+  },
+  {
+    path: 'askaway/add',
+    component: AddquestionComponent
   },
   {
     path: 'teamupform',
