@@ -68,49 +68,49 @@ export let NavDrawer=[
         "role":"student",
         "class":"fa fa-tasks menuicon",
         "name": "Activity tracker",
-        "link":"/add-items",
+        "link":"/management",
     },
 
     {
         "role":"student",
         "class":"fa fa-money  menuicon",
         "name": "Finance Management",
-        "link":"/add-items",
+        "link":"/finance",
     },
 
     {
         "role":"student",
         "class":" fa fa-address-card-o  menuicon",
         "name": "Profile and Resume",
-        "link":"/add-items",
+        "link":"/resume",
     },
 
     {
         "role":"student",
         "class":"fa fa-info-circle menuicon",
         "name": "Resources",
-        "link":"/add-items",
+        "link":"/allresources",
     },
 
     {
         "role":"student",
         "class":"fa fa-commenting-o menuicon",
         "name": "Ask away",
-        "link":"/add-items",
+        "link":"/askaway",
     },
 
     {
         "role":"student",
         "class":"fa fa-users menuicon",
         "name": "Team up",
-        "link":"/add-items",
+        "link":"/joinevent",
     },
 
     {
         "role":"student",
         "class":"fa fa-calendar-check-o menuicon",
         "name": "Events and opportunities",
-        "link":"/add-items",
+        "link":"/events",
     },
 
     {
@@ -119,4 +119,10 @@ export let NavDrawer=[
         "name": "Chat",
         "link":"/add-items",
     },
+    {
+        "role":"student",
+        "class":"fa fa-book menuicon",
+        "name": "LocalEdu",
+        "link":"/localeducators",
+    }
 ]
