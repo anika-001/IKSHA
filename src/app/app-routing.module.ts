@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ManagementComponent } from './management/management.component';
 import { UploadschedComponent } from './uploadsched/uploadsched.component';
 import { ResourcesComponent } from './resources/resources.component';
-import { AllresourcesComponent } from './allresources/allresources.component';
+
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
@@ -19,13 +19,16 @@ import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component'
 import { TeamupformComponent } from './teamupform/teamupform.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 import { ResourceformComponent } from './resourceform/resourceform.component';
+import { HashtagComponent } from './hashtag/hashtag.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
 import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
-import {LocaleducatorsComponent} from './localeducators/localeducators.component'
+import { AllresourcesComponent } from './allresources/allresources.component';
+import {LocaleducatorsComponent} from './localeducators/localeducators.component';
+
 const routes: Routes = [
   {
     path: 'login',
@@ -52,10 +55,6 @@ const routes: Routes = [
     component: UploadschedComponent
   },
   {
-    path: 'management/viewschedule',
-    component: ViewscheduleComponent
-  },
-  {
     path: 'resources',
     component: ResourcesComponent
   },
@@ -72,9 +71,8 @@ const routes: Routes = [
     component: HomeComponent
 
   },
-
   {
-    path: 'profilesite',
+    path:'profilesite',
     component: ProfilesiteComponent
   },
   {
@@ -86,8 +84,12 @@ const routes: Routes = [
     component: AddeventComponent
   },
   {
-    path: 'events',
+    path:'events',
     component: EventsComponent
+  },
+  {
+    path: 'events/hashtag',
+    component: HashtagComponent
   },
   {
     path: 'askaway',
@@ -96,6 +98,10 @@ const routes: Routes = [
   {
     path: 'askaway/ask',
     component: SingleaskawayComponent
+  },
+  {
+    path:'resume',
+    component:ResumeComponent
   },
   {
     path: 'askaway/add',
@@ -128,6 +134,10 @@ const routes: Routes = [
   {
     path: 'expenses/view',
     component: ViewexpensesComponent
+  },
+  {
+    path: 'localeducators',
+    component: LocaleducatorsComponent
   }
 ];
 

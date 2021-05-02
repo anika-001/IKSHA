@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: AngularFirestore, private router: Router) { }
+
+  events: any;
 
   ngOnInit(): void {
+
+    this.getevents();
+  }
+
+  getevents(){
+    this.db.collection("Events").snapshotChanges().subscribe(res => {
+      this.events = res;
+    }) 
+  }
+
+  submit(hashtag: string){
+    this.router.navigate(['/events/hashtag'], { queryParams: {hashtag: hashtag}});
   }
 
 }

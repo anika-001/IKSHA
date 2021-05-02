@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="title">
+        Hashtags
+    </div>
+    <div class="heads">
+        <div class="hashtag">
+            #{{hashtag}}
+        </div>
+        <div class="subscribe">
+            <div class="addaskbut" *ngIf="ifsubscribe == 'subscribe'" (click) = "subscribe()">
+                Subscribe
+              </div>
+              <div *ngIf="ifsubscribe != 'subscribe'">
+                Subscribed
+              </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div *ngFor="let x of events">
+            <div class="card" style="width: 18rem;margin: 2vh 2vw 2vh 2vw;" *ngIf = "x.payload.doc.data().Hashtag == hashtag">
+                <img class="card-img-top" src="../../assets/img/work-6.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{x.payload.doc.data().EventName}}</h5>
+                    <p class="card-text">{{x.payload.doc.data().Link}}</p>
+                    <p class="card-text">{{x.payload.doc.data().email}}</p>
+                    <a (click)="submit(x.payload.doc.data().Hashtag)"
+                        class="btn btn-primary">#{{x.payload.doc.data().Hashtag}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

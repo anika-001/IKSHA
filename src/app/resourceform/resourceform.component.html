@@ -3,10 +3,9 @@
         <div class = "formtitle">
             Enter Resource Details
         </div>
-        <form [formGroup]="teamup" class = "form" >
-            <input type = "text" placeholder="URL" class = "input">
-            <input type = "text" placeholder="Description" class = "input">
-            <div class = "submitbut">
+        <form [formGroup]="addres" class = "form" >
+            <input type = "text" placeholder="Enter Resource Thread Name" class = "input" formControlName = "Thread">
+            <div class = "submitbut" (click) = "submit()">
                 Submit
             </div>
         </form>
