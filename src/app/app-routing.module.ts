@@ -19,6 +19,7 @@ import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component'
 import { TeamupformComponent } from './teamupform/teamupform.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 import { ResourceformComponent } from './resourceform/resourceform.component';
+import { HashtagComponent } from './hashtag/hashtag.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
@@ -83,6 +84,18 @@ const routes: Routes = [
   {
     path:'events',
     component: EventsComponent
+  },
+  {
+    path: 'events/hashtag',
+    component: HashtagComponent
+  },
+  {
+    path: 'askaway',
+    component: AskawaysComponent
+  },
+  {
+    path: 'askaway/ask',
+    component: SingleaskawayComponent
   },
   {
     path:'resume',
