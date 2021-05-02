@@ -28,6 +28,7 @@ export class AddquestionComponent implements OnInit {
   submit(){
     let data = this.addques.value;
     data["uid"] = this.userID;
+    data["NoOfAnswers"] = 0;
     this.db.collection("Questions").add(data).then(res => {
       this.router.navigate(['/askaway']);
     })

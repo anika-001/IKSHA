@@ -6,12 +6,12 @@
         <div class = "chat2but" >
         </div>
         <div class = "chatcentre">
-            <div class = "chatcentreone" *ngFor="let x of [1,2,3,4]">
+            <div class = "chatcentreone" *ngFor="let x of chats">
                 <div class = "chatname">
-                    Pranita
+                    {{x.name}}
                 </div>
                 <div class ="lastchat">
-                    This is a message!
+                   {{x.Message}}
                 </div>
             </div>
         </div>
