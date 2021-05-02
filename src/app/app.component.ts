@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Navbar, NavDrawer } from './jsonobjectsdata/navigation';
 import { AuthService } from './Services/auth.service';
 
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
   selectedRole: string = "student";
   userID: any;
   useremail: any;
-  constructor(private as: AuthService){}
+  constructor(private as: AuthService, private router: Router){}
 
   ngOnInit(){
 
@@ -31,5 +32,11 @@ export class AppComponent implements OnInit {
 
     this.navdata = Navbar;
     this.navdrawerdata = NavDrawer;
+  }
+
+  logout(){
+    this.as.logout().then(() => {
+      this.router.navigate(['/login']);
+    })
   }
 }

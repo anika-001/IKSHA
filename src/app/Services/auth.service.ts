@@ -10,5 +10,8 @@ export class AuthService {
     return this.afAuth.authState;
   }
 
+  logout() {
+    return this.afAuth.signOut();
+  }
   constructor(private afAuth: AngularFireAuth) { }
 }
