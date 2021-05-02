@@ -27,6 +27,9 @@ import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
 import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 import { AllresourcesComponent } from './allresources/allresources.component';
+import { AddresumeComponent } from './addresume/addresume.component';
+import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforreview.component';
+import { ViewpdfComponent } from './viewpdf/viewpdf.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -114,10 +117,6 @@ const routes: Routes = [
     component: ResumeBuilderComponent
   },
   {
-    path: 'resume',
-    component: ResumeComponent
-  },
-  {
     path: 'chat',
     component: ChatComponent
   },
@@ -128,6 +127,18 @@ const routes: Routes = [
   {
     path: 'expenses/view',
     component: ViewexpensesComponent
+  },
+  {
+    path: 'resume/upload',
+    component: AddresumeComponent
+  },
+  {
+    path: 'resume/add',
+    component: AddresumeforreviewComponent
+  },
+  {
+    path: 'pdf',
+    component: ViewpdfComponent
   }
 ];
 

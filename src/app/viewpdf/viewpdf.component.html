@@ -1,0 +1,7 @@
+<object class="mypdf" [data]='sanitizer.bypassSecurityTrustResourceUrl(url)'
+    type="application/pdf" width="100%">
+    <iframe class="mypdf" [src]='sanitizer.bypassSecurityTrustResourceUrl(url)'
+        width="100%" style="border: none;">
+        <p>Your browser does not support PDFs.</p>
+    </iframe>
+</object>
