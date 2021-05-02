@@ -17,63 +17,65 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 300%;
+    font-size: 200%;
+    color:white;
 }
 .month{
     height: 5vh;
     width: 100%;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+    color: cornflowerblue;
     display: flex;
     flex-direction: row;
-    //align-items: center;
     text-align: center;
     font-size: 100%;
-    // padding-left: 50vw;
     justify-content: center;
     font-size: 150%;
+    font-weight: bold;
+}
+.buttons{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-right: 10vh;
+    padding-bottom: 2vh;
+    background-color: rgb(255, 255, 255);
 }
 
 .uploadschedule{
-    height: 5vh;
+    background-color: cornflowerblue;
+    align-self: center;
     width: fit-content;
-    background-color:cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    float: right;
-    padding: 0.5% 0.5%;
+    font-size: 120%;
+    padding: 0.5% 2%;
     border-radius: 10px;
-    margin-right: 0.5%;
+    cursor: pointer;
     color: white;
+    text-decoration: none;
 }
 .viewschedule{
-    height: 5vh;
+    background-color: cornflowerblue;
+    align-self: center;
     width: fit-content;
-    background-color:cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 1%;
-    float: right;
-    padding: 0.5% 0.5%;
+    font-size: 120%;
+    padding: 0.5% 2%;
     border-radius: 10px;
+    cursor: pointer;
     color: white;
+    text-decoration: none;
 }
 .todo{
-    height: 5vh;
+    background-color: cornflowerblue;
+    align-self: center;
     width: fit-content;
-    background-color:cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 1%;
-    float: right;
-    padding: 0.5% 0.5%;
+    font-size: 120%;
+    padding: 0.5% 2%;
     border-radius: 10px;
+    cursor: pointer;
     color: white;
+    text-decoration: none;
 }
 .alldays{
     min-height: 80vh;
@@ -84,9 +86,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // align-content: center;
-    // padding-right: 2%;
-    // padding-left: 2%;
     padding: 0.5% 0.5% 0.5% 0.5%;
 }
 
@@ -203,7 +202,7 @@ input:-webkit-autofill:active
     left: 0%;
 }
 .plus:hover{
-    color:rgb(22, 196, 172);
+    color:cornflowerblue;
     cursor: pointer;
     height: fit-content;
     width: fit-content;

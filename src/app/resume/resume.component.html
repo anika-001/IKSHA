@@ -1,6 +1,6 @@
 <div class="main">
     <div class="title">
-        Resume and Profile
+        Profile and Resume
     </div>
     <div class="addresume">
         <a class="addresumebut" routerLink="/resume/upload">
@@ -32,15 +32,15 @@
                     <div class="flip-card">
                         <div class="front">
                             <img src="../../assets/img/becca-tapert-GnY_mW1Q6Xc-unsplash.jpg" alt="" />
-                            <h1>{{x.Name}}</h1>
-                            <h2>{{x.Profession}}</h2>
-                            <b>{{x.Email}}</b>
+                            <h1>{{x.payload.doc.data().Name}}</h1>
+                            <h2>{{x.payload.doc.data().Profession}}</h2>
+                            <b>{{x.payload.doc.data().Email}}</b>
                             <p>Click for Description</p>
                         </div>
                         <div class="back">
                             <h1>About me</h1>
                             <hr />
-                            <p>{{x.Description}}</p>
+                            <p>{{x.payload.doc.data().Description}}</p>
                             <hr />
                             <button type="button" class="btn btn-primary">Review</button>
                             <p class="click">Click to flip</p>

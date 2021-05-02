@@ -2,9 +2,7 @@
     <div class="title">
         Activity Tracker
     </div>
-    <div class="month">
-        May 2021
-    </div>
+    
     <div class="buttons"
     style="padding-top: 0.5%;">
         <a class="uploadschedule" routerLink="/management/uploadsched">
@@ -17,6 +15,9 @@
         <div class="todo" (click)="todoggle(true)">
             To do list
         </div>
+    </div>
+    <div class="month">
+        May 2021
     </div>
     <div class="alldays">        
         <div class="day" *ngFor="let x of days">

@@ -12,12 +12,13 @@
     height: 10vh;
     width: 100%;
     background-color: cornflowerblue;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 200%;
-    color: white;
+    color:rgb(255, 255, 255);
 }
 .cards{
     width:100%;
@@ -54,16 +55,14 @@
 
 .addaskbut {
     background-color: cornflowerblue;
-    // align-self: flex-end;
-    // align-self: center;
+    align-self: center;
     width: fit-content;
-    font-size: 150%;
-    padding: 0.5% 2%;
-    // margin-right: 2%;
+    font-size: 120%;
+    padding: 0.5% 1.5%;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     text-decoration: none;
-    float: right;
-    margin-right: 2%;
+    border-style: solid;
+    border-color: white;
 }

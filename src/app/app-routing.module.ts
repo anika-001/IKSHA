@@ -30,6 +30,8 @@ import { AllresourcesComponent } from './allresources/allresources.component';
 import { AddresumeComponent } from './addresume/addresume.component';
 import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforreview.component';
 import { ViewpdfComponent } from './viewpdf/viewpdf.component';
+import {LocaleducatorsComponent} from './localeducators/localeducators.component';
+
 const routes: Routes = [
   {
     path: 'login',
@@ -139,6 +141,18 @@ const routes: Routes = [
   {
     path: 'pdf',
     component: ViewpdfComponent
+  },
+  {
+    path: 'management/viewschedule',
+    component: ViewscheduleComponent
+  },
+  {
+    path: 'expenses/view',
+    component: ViewexpensesComponent
+  },
+  {
+    path: 'localeducators',
+    component: LocaleducatorsComponent
   }
 ];
 
