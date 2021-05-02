@@ -3,12 +3,13 @@
         Schedules
     </div>
     <div class="content">
-        <div class="descriptions" *ngFor="let x of cards">
+        <div class="descriptions" *ngFor="let x of schedule">
+            <!-- <div> {{x.payload.doc.data().ScheduleName}} </div> -->
             <div class="name">
-                Name
+                {{x.payload.doc.data().ScheduleName}}
             </div>
             <div class="type">
-                Type
+                {{x.payload.doc.data().type}}
             </div>
             <div class="link">
                 Click to view schedule

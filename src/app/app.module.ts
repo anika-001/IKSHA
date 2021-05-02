@@ -43,6 +43,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 import { AddquestionComponent } from './addquestion/addquestion.component';
+import { ResourceformComponent } from './resourceform/resourceform.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 
 
@@ -82,6 +83,7 @@ export class HammerConfig extends HammerGestureConfig {
     ChatComponent,
     ViewscheduleComponent,
     AddquestionComponent,
+    ResourceformComponent,
     ViewexpensesComponent
   ],
   imports: [

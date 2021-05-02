@@ -18,6 +18,7 @@ import { AskawaysComponent } from './askaways/askaways.component';
 import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
 import { TeamupformComponent } from './teamupform/teamupform.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
+import { ResourceformComponent } from './resourceform/resourceform.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'allresources',
     component: AllresourcesComponent
+  },
+  {
+    path: 'resources/resourceform',
+    component: ResourceformComponent
   },
   {
     path: 'home',
