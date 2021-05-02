@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   opened: boolean = false;
   user: any;
-  userEmail: any = "idkyet";
+  userEmail: any = "New User";
   navdata: any;
   navdrawerdata: any;
   selectedRole: string = "student";
@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
 
     this.as.getUserState()
     .subscribe(user => {
+      if(user == null){this.router.navigate(['/login'])}
       this.userID = user.uid;
       this.userEmail = user.email;
       //console.log(farm, id);

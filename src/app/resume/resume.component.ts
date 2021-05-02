@@ -18,6 +18,7 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.getresume();
         this.userID = user.uid;
       })

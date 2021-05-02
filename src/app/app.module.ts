@@ -53,6 +53,8 @@ import { AddresumeforreviewComponent } from './addresumeforreview/addresumeforre
 import { AddresumeComponent } from './addresume/addresume.component';
 import { ViewpdfComponent } from './viewpdf/viewpdf.component';
 import { ReviewresumeComponent } from './reviewresume/reviewresume.component';
+import { FooterComponent } from './footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 firebase.initializeApp(environment.firebaseConfig);
@@ -99,7 +101,8 @@ export class HammerConfig extends HammerGestureConfig {
     AddresumeforreviewComponent,
     AddresumeComponent,
     ViewpdfComponent,
-    ReviewresumeComponent
+    ReviewresumeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -115,7 +118,13 @@ export class HammerConfig extends HammerGestureConfig {
     MatSidenavModule,
     MatSelectModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
 
   ],
   providers: [],

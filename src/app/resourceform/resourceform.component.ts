@@ -23,6 +23,7 @@ export class ResourceformComponent implements OnInit {
   ngOnInit(): void {
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         this.userEmail = user.email;
       })

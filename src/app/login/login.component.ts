@@ -5,6 +5,7 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import firebase from 'firebase/app';
 import 'firebase/auth'
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
 
   login: boolean = true;
-  constructor(private afAuth: AngularFireAuth, private fb: FormBuilder, private router: Router) { }
+  constructor(private afAuth: AngularFireAuth, private fb: FormBuilder, private router: Router, private as : AuthService) { }
 
   Auth = this.fb.group({
     emaillogin: [''],
@@ -25,6 +26,10 @@ export class LoginComponent implements OnInit {
   })
 
   ngOnInit(): void {
+    this.as.getUserState()
+    .subscribe(user => {
+      if(user != null){this.router.navigate(['/home'])}
+    })
   }
 
 

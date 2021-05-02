@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../Services/auth.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { AuthService } from '../Services/auth.service';
 })
 export class ManagementComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private as: AuthService, private db: AngularFirestore) { }
+  constructor(private fb: FormBuilder, private as: AuthService, private db: AngularFirestore, private router: Router) { }
   days: any[] = [];
   week=["Sat","Sun","Mon","Tue","Wed","Thur","Fri"];
   showform: boolean=false;
@@ -44,6 +45,7 @@ export class ManagementComponent implements OnInit {
 
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         this.getReminders();
         //console.log(farm, id);
