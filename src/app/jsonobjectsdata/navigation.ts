@@ -54,6 +54,12 @@ export let Navbar=[
         "name": "Chat",
         "link":"/chat",
     },
+    {
+        "role":"student",
+        "class":"fa fa-comments menuicon",
+        "name": "LocalEdu",
+        "link":"/localeducators",
+    }
     
 ]
 
