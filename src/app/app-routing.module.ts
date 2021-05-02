@@ -17,6 +17,7 @@ import { EventsComponent } from './events/events.component';
 import { AskawaysComponent } from './askaways/askaways.component';
 import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
 import { TeamupformComponent } from './teamupform/teamupform.component';
+import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'management/uploadsched',
     component: UploadschedComponent
+  },
+  {
+    path: 'management/viewschedule',
+    component: ViewscheduleComponent
   },
   {
     path: 'resources',

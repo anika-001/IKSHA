@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-addexpense',
@@ -8,53 +11,72 @@ import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@ang
 })
 export class AddexpenseComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private as: AuthService, private db: AngularFirestore, private router: Router) { }
 
   receiptUpload: any;
 
   type: string;
   addexp = this.fb.group({
     ExpenseName: [''],
-    ExpenseCategory: [''],
     Amount: ['']
   })
 
   catoptions = [
     {
-      name: "1",
+      name: "Travel",
       displayname: "Travel"
     },
     {
-      name: "2",
+      name: "Food",
       displayname: "Food"
     },
     {
-      name: "3",
+      name: "Personal",
       displayname: "Personal" 
     },
     {
-      name: "4",
+      name: "Health",
       displayname: "Health"
     },
     {
-      name: "5",
+      name: "Subscriptions and Bills",
       displayname: "Subscriptions and Bills"
     },
     {
-      name: "6",
+      name: "Savings",
       displayname: "Savings"
     },
     {
-      name: "7",
+      name: "Loans",
       displayname: "Loans" 
     },
     {
-      name: "8",
+      name: "Miscellaneous",
       displayname: "Miscellaneous" 
     }
   ]
 
+  userID: any;
+
   ngOnInit(): void {
+    this.as.getUserState()
+      .subscribe(user => {
+        this.userID = user.uid;
+        //console.log(farm, id);
+      })
+  }
+  submitexpense(){
+    let data = this.addexp.value;
+    console.log(data);
+    data["ExpenseCategory"] = this.type;
+    data["pdflink"] = "empty";
+    this.db.collection("Finance").doc(this.userID).collection("Expenses").add(data).then(res => {
+      this.router.navigate(['/finance']);
+      console.log(res);
+    })
+    .catch(e => {
+
+    })
   }
 
   uploadreceipt(files: FileList) {
