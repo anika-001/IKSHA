@@ -28,6 +28,7 @@ export class ResourcesComponent implements OnInit {
     this.getresources();
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         this.userEmail = user.email;
       })

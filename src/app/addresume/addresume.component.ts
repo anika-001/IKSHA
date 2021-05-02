@@ -25,6 +25,7 @@ export class AddresumeComponent implements OnInit {
   ngOnInit(): void {
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         //  this.store("...");
         //console.log(farm, id);

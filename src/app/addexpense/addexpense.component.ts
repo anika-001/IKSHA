@@ -62,6 +62,7 @@ export class AddexpenseComponent implements OnInit {
     this.as.getUserState()
       .subscribe(user => {
         this.userID = user.uid;
+        if(user == null){this.router.navigate(['/login'])}
         //console.log(farm, id);
       })
   }

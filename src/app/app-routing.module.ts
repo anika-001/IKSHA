@@ -158,6 +158,11 @@ const routes: Routes = [
   {
     path: 'resume/review',
     component: ReviewresumeComponent
+  },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
   }
 ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 import { AuthService } from '../Services/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../Services/auth.service';
 })
 export class ViewexpensesComponent implements OnInit {
 
-  constructor(private db: AngularFirestore, private as: AuthService) { }
+  constructor(private db: AngularFirestore, private as: AuthService, private router: Router) { }
   cards: any[] = [];
 
   userID: any;
@@ -19,6 +20,7 @@ export class ViewexpensesComponent implements OnInit {
   ngOnInit(): void {
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         this.getexpenses();
         this.gettriggers();

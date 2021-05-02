@@ -26,6 +26,7 @@ userEmail:any;
       .subscribe(user => {
         this.userID = user.uid;
         this.userEmail=user.email;
+        
         //console.log(farm, id);
       })
   

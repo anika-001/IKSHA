@@ -27,6 +27,7 @@ export class ReviewresumeComponent implements OnInit {
     this.url = this.route.snapshot.queryParams['url'];
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.getreviews();
         this.userID = user.uid;
         this.userEmail = user.email;

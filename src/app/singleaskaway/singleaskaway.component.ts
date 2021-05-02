@@ -29,6 +29,7 @@ export class SingleaskawayComponent implements OnInit {
     this.getanswers();
     this.as.getUserState()
       .subscribe(user => {
+        if(user == null){this.router.navigate(['/login'])}
         this.userID = user.uid;
         this.userEmail = user.email;
       })
