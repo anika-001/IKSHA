@@ -45,7 +45,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-calendar-check-o menuicon",
         "name": "Events and opportunities",
-        "link":"/add-items",
+        "link":"/events",
     },
 
     {
