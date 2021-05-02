@@ -24,7 +24,7 @@ export let Navbar=[
         "role":"student",
         "class":"fa fa-info-circle menuicon",
         "name": "Resources",
-        "link":"/add-items",
+        "link":"/allresources",
     },
 
     {

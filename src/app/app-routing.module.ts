@@ -71,7 +71,6 @@ const routes: Routes = [
     component: HomeComponent
 
   },
-
   {
     path: 'profilesite',
     component: ProfilesiteComponent
