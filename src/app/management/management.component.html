@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="title">
+        Activity Tracker
+    </div>
+    <div class="month">
+        May 2021
+    </div>
+    <div class="buttons"
+    style="padding-top: 0.5%;">
+        <a class="uploadschedule" routerLink="/management/uploadsched">
+                Upload Schedule
+            </a>
+            
+        <div class="viewschedule">
+            View Schedule
+        </div>
+    </div>
+    <div class="alldays">        
+        <div class="day" *ngFor="let x of days">
+            <!-- <span class="border border-left-0"></span> -->
+            <div style="flex-basis: 50%; font-size: 200%;"> 
+                {{x.date}}
+            </div>
+            <div style="flex-basis: 50%;padding-top: 10%; padding-left: 10%;">{{x.day}}</div>
+            <div style="flex-basis: 50%; padding-top: 33%; font-size: 150%;">+</div>
+        </div>
+
+    </div>
+</div>

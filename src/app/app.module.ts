@@ -1,7 +1,7 @@
 import { BrowserModule, HammerModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { Injectable, NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
-
+import * as Hammer from 'hammerjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth"
 
 
 import firebase from 'firebase/app';
@@ -26,11 +27,27 @@ import { AddexpenseComponent } from './addexpense/addexpense.component';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { AddtriggerComponent } from './addtrigger/addtrigger.component';
 import { HomeComponent } from './home/home.component';
+import {ManagementComponent} from './management/management.component';
+import { UploadschedComponent } from './uploadsched/uploadsched.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { ProfilesiteComponent } from './profilesite/profilesite.component';
+import { TemplatesComponent } from './templates/templates.component';
+import { AddeventComponent } from './addevent/addevent.component';
+import { EventsComponent } from './events/events.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 firebase.initializeApp(environment.firebaseConfig);
 
-
+@Injectable({ providedIn: 'root' })
+export class HammerConfig extends HammerGestureConfig {
+  buildHammer(element: HTMLElement) {
+    let mc = new Hammer(element, {
+      touchAction: "pan-y",
+    });
+    return mc;
+  }
+}
 
 @NgModule({
   declarations: [
@@ -41,7 +58,14 @@ firebase.initializeApp(environment.firebaseConfig);
     ResumeBuilderComponent,
     AddtriggerComponent,
     HomeComponent,
-    
+    ManagementComponent,
+    UploadschedComponent,
+    ResourcesComponent,
+    ProfilesiteComponent,
+    TemplatesComponent,
+    AddeventComponent,
+    EventsComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +79,8 @@ firebase.initializeApp(environment.firebaseConfig);
     AngularFirestoreModule,
     ChartsModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    AngularFireAuthModule
 
   ],
   providers: [],
