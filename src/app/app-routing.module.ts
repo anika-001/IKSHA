@@ -20,6 +20,7 @@ import { TeamupformComponent } from './teamupform/teamupform.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
+import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
 const routes: Routes = [
   {
     path: 'login',
@@ -98,7 +99,12 @@ const routes: Routes = [
   {
     path: 'chat',
     component: ChatComponent
+  },
+  {
+    path: 'joinevent',
+    component: TeamupcardsComponent
   }
+  
 ];
 
 @NgModule({
