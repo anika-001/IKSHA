@@ -20,11 +20,20 @@ export class ProfilesiteComponent implements OnInit {
   startDate:any;
   endDate:any;
   description:any;
+  skill1:any;
+  skill2:any;
+  skill3:any;
+  skill4:any;
 
   ngOnInit(): void {
     this.fname = this.route.snapshot.queryParams['fname'];
     this.lname = this.route.snapshot.queryParams['lname'];
     this.email = this.route.snapshot.queryParams['email'];
+    this.skill1 = this.route.snapshot.queryParams['skill1'];
+    this.skill2 = this.route.snapshot.queryParams['skill2'];
+    this.skill3 = this.route.snapshot.queryParams['skill3'];
+    this.skill4 = this.route.snapshot.queryParams['skill4'];
+
     this.phone=this.route.snapshot.queryParams['phone'];
     this.title=this.route.snapshot.queryParams['title'];
     this.company = this.route.snapshot.queryParams['company'];

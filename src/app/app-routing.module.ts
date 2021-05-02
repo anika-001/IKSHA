@@ -22,6 +22,7 @@ import { ResourceformComponent } from './resourceform/resourceform.component';
 
 import { ResumeComponent } from './resume/resume.component';
 import { ChatComponent } from './chat/chat.component';
+import {TeamupcardsComponent} from './teamupcards/teamupcards.component'
 import { AddquestionComponent } from './addquestion/addquestion.component';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 const routes: Routes = [
@@ -116,9 +117,13 @@ const routes: Routes = [
     component: ChatComponent
   },
   {
+    path: 'joinevent',
+    component: TeamupcardsComponent
+  },
+  {
     path: 'expenses/view',
     component: ViewexpensesComponent
-  },
+  }
 ];
 
 @NgModule({
