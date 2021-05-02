@@ -34,6 +34,10 @@ import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
 import { EventsComponent } from './events/events.component';
+import { AllresourcesComponent } from './allresources/allresources.component';
+import { AskawaysComponent } from './askaways/askaways.component';
+import { SingleaskawayComponent } from './singleaskaway/singleaskaway.component';
+import { TeamupformComponent } from './teamupform/teamupform.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -62,7 +66,11 @@ export class HammerConfig extends HammerGestureConfig {
     ProfilesiteComponent,
     TemplatesComponent,
     AddeventComponent,
-    EventsComponent
+    EventsComponent,
+    AllresourcesComponent,
+    AskawaysComponent,
+    SingleaskawayComponent,
+    TeamupformComponent
   ],
   imports: [
     BrowserModule,

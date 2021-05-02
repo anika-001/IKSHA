@@ -14,6 +14,9 @@
         <div class="viewschedule">
             View Schedule
         </div>
+        <div class="todo" (click)="todoggle(true)">
+            To do list
+        </div>
     </div>
     <div class="alldays">        
         <div class="day" *ngFor="let x of days">
@@ -22,8 +25,46 @@
                 {{x.date}}
             </div>
             <div style="flex-basis: 50%;padding-top: 10%; padding-left: 10%;">{{x.day}}</div>
-            <div style="flex-basis: 50%; padding-top: 33%; font-size: 150%;">+</div>
+            <div style="flex-basis: 50%; padding-top: 33%; font-size: 150%;" (click)="toggle(true)">
+                <div class="plus">+</div>
+            </div>
         </div>
 
+    </div>
+    <div class="plusform" *ngIf = "showform">
+        <div class = "formcont">
+            <div class = "formtitle">
+                Add expense
+            </div>
+            <form [formGroup]="addexp" class = "form" >
+                <input type = "text" placeholder="Enter Name" class = "input">
+                <input type = "text" placeholder="Enter Time" class = "input">
+                <mat-form-field>
+                    <mat-label style="font-size: 80%; color: black;">Select Type</mat-label>
+                    <mat-select [(value)]="type"
+                        style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                        <mat-option value="x.name" *ngFor = "let x of catoptions">
+                            {{x.displayname}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div class = "submitbut" (click)="toggle(false)">
+                    Submit
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="todoform" *ngIf = "todoshow">
+        <div class = "formcont">
+            <div class = "formtitle">
+                Add your list
+            </div>
+            <form [formGroup]="todoform" class = "form" >
+                <input type = "text" placeholder="Enter Name" class = "input">
+                <div class = "submitbut" (click)="todoggle(false)">
+                    Done
+                </div>
+            </form>
+        </div>
     </div>
 </div>
