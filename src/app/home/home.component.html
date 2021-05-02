@@ -1,19 +1,64 @@
-<div class = "main">
-    <div class = "title">
-
+<div class="main">
+    <div class="title">
+        Dashboard
     </div>
-    <div class = "mainbody">
-        <div class = "activity">
-
+    <div class="mainbody">
+        <div class="module" style="display: flex;">
+            <div
+                style="flex-basis: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-size: 150%; flex-basis: 20%;">You have 3 pending activities</div>
+                <div *ngFor="let x of ['assignment', 'test', 'practice']" style="flex-basis: 10%;">
+                    You have a {{x}} pending for today
+                </div>
+            </div>
+            <div style="flex-basis: 50%; display: flex; flex-direction: column; justify-content: space-evenly;">
+                <div style="font-size: 150%; text-align: center;">Your recent activity</div><canvas baseChart
+                    [data]="activity.Data" [labels]="activity.Label" [chartType]="activity.Type"></canvas>
+            </div>
         </div>
-        <div class = "finance">
-
+        <div class="module" style="display: flex;">
+            <div
+                style="flex-basis: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-size: 150%; flex-basis: 20%;">Your expenditure</div>
+                <div *ngFor="let x of ['Expenses: Rs 1000', 'Income: Rs 3000', 'Savings: Rs 2000']"
+                    style="flex-basis: 10%;">
+                    {{x}}
+                </div>
+            </div>
+            <div style="flex-basis: 50%; display: flex; flex-direction: column; justify-content: space-evenly;">
+                <div style="font-size: 150%; text-align: center;">Your recent activity</div><canvas baseChart
+                    [data]="expenses.Data" [labels]="expenses.Label" [chartType]="expenses.Type"></canvas>
+            </div>
         </div>
-        <div class = "profile">
-
+        <div class="module" style="display: flex;">
+            <div
+                style="flex-basis: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-size: 150%; flex-basis: 20%;">You have 3 new reviews</div>
+                <div *ngFor="let x of ['You can expand.....@anishK', 'The resume looks....@Kaya123', 'You can upload....@AmishaC']"
+                    style="flex-basis: 10%;">
+                    {{x}}
+                </div>
+            </div>
+            <div style="flex-basis: 50%; display: flex; flex-direction: column; justify-content: space-evenly;">
+                <div class="viewresume" routerLink="/finance/addtrigger">
+                    View Resume
+                </div>
+            </div>
         </div>
-        <div class = "resources">
-            
+        <div class="module" style="display: flex;">
+            <div
+                style="flex-basis: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-size: 150%; flex-basis: 20%;">Explore new hashtags</div>
+                <div *ngFor="let x of ['#hackathons', '#hiringhackathons', '#art', '#fest', '#mumbaifest']"
+                    style="flex-basis: 10%;">
+                    {{x}}
+                </div>
+            </div>
+            <div style="flex-basis: 50%; display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap;">
+                <div *ngFor = "let x of ['Accenture Hiring', 'DSC Hackathon', 'IEEE UMIT 360 Degrees', 'Hackerrack May circuits']" style = "height: 15vh; width: 15vh; background-color: white; margin: 2%; cursor: pointer; display: flex; flex-direction: column;">
+                <div style="flex-basis: 80%; background-image: url('../../assets/img/post-1.jpg'); background-size: 100% 100%;"></div>
+                <div style="flex-basis: 20%; text-align: center;">{{x}}</div>
+                </div>
+            </div>
         </div>
     </div>
-</div>

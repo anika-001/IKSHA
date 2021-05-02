@@ -13,7 +13,7 @@ import { ResumeBuilderComponent } from './resume-builder/resume-builder.componen
 import { ProfilesiteComponent } from './profilesite/profilesite.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AddeventComponent } from './addevent/addevent.component';
-import {EventsComponent} from './events/events.component';
+import { EventsComponent } from './events/events.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -50,7 +50,7 @@ const routes: Routes = [
   },
 
   {
-    path:'profilesite',
+    path: 'profilesite',
     component: ProfilesiteComponent
   },
   {
@@ -62,8 +62,14 @@ const routes: Routes = [
     component: AddeventComponent
   },
   {
-    path:'events',
+    path: 'events',
     component: EventsComponent
+  },
+  {
+
+    path: 'resumeform',
+    component: ResumeBuilderComponent
+
   }
 ];
 
