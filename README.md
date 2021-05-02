@@ -1,5 +1,5 @@
 ![IKSHA (2)](https://user-images.githubusercontent.com/62497183/116829126-cf01bc00-abc0-11eb-9df4-49e675ea92e5.png)
-# IKSHSA : One Stop Solution
+# IKSHA : One Stop Solution
 ## Project Description
 ### Project made at:  HackDSC
 An application for students that manages and tracks activities, schedules, finances, and helps in building a profile that expands your network.
