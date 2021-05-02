@@ -53,6 +53,8 @@ export class SingleaskawayComponent implements OnInit {
     let data = this.addans.value;
     data["uid"] = this.userID;
     data["email"] = this.userEmail;
+    data["likes"] = 0;
+    data["dislikes"] = 0;
     this.db.collection("Questions").doc(this.id).collection("Answers").add(data).then(res => {
       this.addans.get('Answer').setValue('');
     })
